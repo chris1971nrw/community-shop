@@ -1,0 +1,29 @@
+{
+  "name": "community-shop",
+  "version": "1.0.0",
+  "description": "Community Shop - Backend + Frontend + Admin",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "node src/index.js",
+    "api": "node src/api.js",
+    "frontend": "node src/frontend.js",
+    "admin": "node src/admin.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "express-session": "^1.7.7",
+    "cookie-parser": "^1.4.6",
+    "express-validator": "^7.0.1",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "compression": "^1.7.4"
+  }
+}

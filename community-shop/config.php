@@ -6,7 +6,7 @@
 
 return [
     'app' => [
-        'name' => 'Community Shop für BeDifferent',
+        'name' => 'Community Shop'
         'version' => '1.0.0',
         'timezone' => 'Europe/Berlin',
         'debug' => false,

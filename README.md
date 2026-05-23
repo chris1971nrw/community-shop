@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Community-Shop Logo](../workspace-community/shop/logo.png)
+![Community-Shop Logo](repository-icon.png)
 
 **E-Commerce Plattform für deine Community**
 

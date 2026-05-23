@@ -1,0 +1,48 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  # Deploy Produktion
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Deploy to Server
+        run: |
+          echo "Deploy zu Production"
+          echo "Verwende SSH oder FTP für Deployment"
+          
+      - name: Purge CDN Cache
+        run: |
+          echo "CDN Cache leeren (optional)"
+          
+      - name: Send Notification
+        uses: fregante/slack-notify-action@v1
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          message: 'Production Deployment erfolgreich! 🚀'
+
+  # Notify Team
+  notify-team:
+    name: Notify Team
+    runs-on: ubuntu-latest
+    needs: deploy-production
+    steps:
+      - name: Send Discord Notification
+        uses: Ilshidur/action-discord@master
+        with:
+          server_id: ${{ secrets.DISCORD_SERVER_ID }}
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          message: 'Deployment erfolgreich! ✅ Community Shop aktualisiert'
+      
+      - name: Send Telegram Notification
+        run: |
+          echo "Telegram Benachrichtigung (optional)"

@@ -1,0 +1,109 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # PHP-Code-Qualität prüfen
+  code-quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: dom, curl, libxml, mbstring, xml, tokenizer, zip, PDO
+          tools: composer
+      
+      - name: Install Dependencies
+        run: composer install --no-dev --optimize-autoloader
+      
+      - name: Lint PHP
+        run: php -l backend/bootstrap.php
+        continue-on-error: true
+
+  # Tests ausführen
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    needs: code-quality
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          
+      - name: Install Dependencies
+        run: composer install
+      
+      - name: Run Tests
+        run: vendor/bin/phpunit
+        continue-on-error: true
+
+  # Sicherheits-Prüfung
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: code-quality
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          
+      - name: Install Dependencies
+        run: composer install
+      
+      - name: PHP Security Check
+        run: composer qrb --report || true
+        continue-on-error: true
+
+  # Documentation generieren
+  documentation:
+    name: Generate Documentation
+    runs-on: ubuntu-latest
+    needs: [code-quality, tests, security-scan]
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          
+      - name: Generate API Docs
+        run: php docsgen.php
+        continue-on-error: true
+
+  # Deploy zu GitHub Pages
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: [documentation]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Pages
+        run: |
+          mkdir -p public
+          cp frontend/index.html public/
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages

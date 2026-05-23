@@ -1,0 +1,64 @@
+# Community Shop Wiki
+
+Willkommen in der Community Shop Dokumentation!
+
+## Inhalt
+
+- [Architektur](#architektur)
+- [Installation](#installation)
+- [Konfiguration](#konfiguration)
+- [API](#api)
+- [Sicherheit](#sicherheit)
+- [Troubleshooting](#troubleshooting)
+
+## Architektur
+
+### Überblick
+
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│   Frontend  │────▶│   Backend   │────▶│  Datenbank   │
+│             │     │             │     │              │
+│  HTML/CSS   │     │  PHP 8.2    │     │  MySQL       │
+└─────────────┘     └─────────────┘     └─────────────┘
+```
+
+### Komponenten
+
+- **Frontend**: HTML/CSS/JavaScript
+- **Backend**: PHP 8.2+ (OOP)
+- **Datenbank**: MySQL/MariaDB
+- **Webserver**: Nginx/Apache
+
+## Installation
+
+1. Repository klonen
+2. `composer install`
+3. `npm install` (optional)
+4. Datenbank konfigurieren
+5. Migrationen ausführen
+6. Webserver starten
+
+## Konfiguration
+
+- `.env` Datei konfigurieren
+- `config/database.php` anpassen
+- API-Keys setzen (optional)
+
+## API
+
+Dokumentation: [API.md](../../API.md)
+
+## Sicherheit
+
+- SSL-Verschlüsselung erforderlich
+- CSRF-Token für Forms
+- Rate-Limiting implementiert
+
+## Troubleshooting
+
+### Häufige Probleme
+
+- **Datenbank-Verbindungsfehler**: `config/database.php` prüfen
+- **Permission Denied**: Ordner-Berechtigungen prüfen
+- **Composer-Fehler**: Internetverbindung prüfen

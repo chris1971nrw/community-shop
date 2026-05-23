@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "02:00"
+    targets:
+      - branch: main
+        repository: chris1971nrw/community-shop
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "02:00"
+    open-pull-requests-limit: 10
+    targets:
+      - branch: main
+        repository: chris1971nrw/community-shop

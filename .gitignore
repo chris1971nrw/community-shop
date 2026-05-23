@@ -46,3 +46,8 @@ coverage/
 
 # Composer
 /vendor/
+
+# Agenten-Prompts (privat)
+*_prompt.md
+openclaw.yaml
+config/openclaw.yaml

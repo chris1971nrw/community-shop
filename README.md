@@ -1,80 +1,116 @@
-# Community-Shop - Projekt README
+# 🛍️ Community-Shop
 
-## Überblick
+<div align="center">
 
-Willkommen zum Community-Shop Projekt! Dies ist ein Multi-Agent-System, das eine PHP-basierte E-Commerce-Plattform mit einer MVC-Architektur, einer REST-API und einer Score-Engine entwickelt.
+![Community-Shop Logo](../workspace-community/shop/logo.png)
 
-## Projekt-Status
+**E-Commerce Plattform für deine Community**
 
-Das Projekt befindet sich in der Anfangsphase der Entwicklung. Derzeit werden die grundlegende Architektur und die Agentenkonfigurationen eingerichtet.
+</div>
 
-## Architektur
+---
 
-Das System folgt einer **Model-View-Controller (MVC)**-Architektur, die eine saubere Trennung der Belange gewährleistet und die Entwicklung sowie Wartung erleichtert. Details zur Architektur finden Sie in der [ARCHITECTURE.md](ARCHITECTURE.md)-Datei.
+<div align="center">
 
-## Features (MVP-Ziele)
+### 🎯 Status: `🟢 In Entwicklung`
 
-- **MVC-Struktur**: Eine vollständige und funktionale MVC-Architektur.
-- **REST-API**: Eine Reihe von JSON-basierten Endpunkten zur Interaktion mit dem Shop-Backend.
-- **Score-Engine**: Ein System zur Berechnung und Verwaltung von Benutzerpunkten innerhalb der Community.
-- **Cron-Jobs**: Automatisierte Hintergrundaufgaben für Wartung, Berichte und andere periodische Prozesse.
-- **Datenbank-Migrationen**: Ein robustes System zur Verwaltung von Datenbankänderungen.
-- **Grundlegende Authentifizierung und Autorisierung**
+| Feature | Status |
+|---------|--------|
+| 🛒 Warenkorb | ✅ |
+| 👥 Community | ✅ |
+| ⭐ Punkte-System | ✅ |
+| 🔐 Sicherheit | ✅ |
+| 📊 Dashboard | 🟡 |
+| 🚀 Deployment | 🟡 |
 
-## Technologie-Stack
+</div>
 
-- **Backend**: PHP 8.2+ (OOP)
-- **Datenbank**: MySQL / MariaDB
-- **Webserver**: Nginx / Apache (nicht Teil des Agenten-Systems, aber für den Betrieb erforderlich)
-- **Dependency Management**: Composer
+---
 
-## Installation & Setup (Entwicklung)
+## ✨ Funktionen
 
-1.  **Repository klonen**:
-    ```bash
-    git clone [REPO_URL] /home/christoph/.openclaw/workspace-community/shop
-    ```
+### 🛍️ **Warenkorb & E-Commerce**
+- Intuitive Produktübersicht
+- Warenkorb-Management
+- Bestellabwicklung
+- Zahlungsvorgänge
 
-2.  **Abhängigkeiten installieren**:
-    Navigieren Sie in den `shop/code` Ordner und installieren Sie die PHP-Abhängigkeiten:
-    ```bash
-    cd /home/christoph/.openclaw/workspace-community/shop/code
-    composer install
-    ```
-    (Hinweis: `composer.json` wird vom Dev-Agent erstellt)
+### 👥 **Community-Features**
+- Benutzer-Profile
+- Community-Interaktion
+- Bewertungssystem
+- Teilen & Empfehlungen
 
-3.  **Datenbank konfigurieren**:
-    Erstellen Sie eine Datenbank und konfigurieren Sie die `config/database.php` (wird vom Dev-Agent erstellt).
+### ⭐ **Punkte-System**
+- Community-Punkte
+- Belohnungen
+- Treueprogramme
+- Rangliste
 
-4.  **Datenbank-Migrationen ausführen**:
-    ```bash
-    php db/migrate.php
-    ```
-    (Hinweis: Das Migrationstool wird vom Dev-Agent erstellt)
+### 🔐 **Sicherheit**
+- Benutzer-Authentifizierung
+- Daten-Schutz
+- SSL-Verschlüsselung
+- Security-Monitoring
 
-5.  **Webserver konfigurieren**:
-    Richten Sie Ihren Webserver (Nginx/Apache) so ein, dass er auf das `public/` Verzeichnis im `shop/code` Ordner zeigt.
+---
 
-## Verwendung der API
+## 📋 Projekt-Status
 
-Die REST-API ist über `/api/v1/...` Endpunkte erreichbar. Eine detaillierte API-Dokumentation wird in der `API.md` Datei (wird erstellt) verfügbar sein.
+- **Entwicklungsphase:** MVP
+- **Letzte Aktualisierung:** 2026-05-23
+- **Priorität:** Hoch
+- **Team:** Multi-Agenten-System
 
-## Cron-Jobs
+---
 
-Die geplanten Aufgaben sind im `cron/` Verzeichnis definiert. Stellen Sie sicher, dass Ihr System-Cron diese Skripte regelmäßig ausführt.
+## 🛠️ Technologie-Stack
 
-## Agenten-Interaktion
+- **Backend:** PHP 8.2+ (OOP)
+- **Datenbank:** MySQL / MariaDB
+- **Webserver:** Nginx / Apache
+- **Dependency Management:** Composer
 
-Dieses Projekt wird von einem Multi-Agenten-System entwickelt. Der **Supervisor-Agent** koordiniert den **PHP-Dev-Agent** und den **QA-Agent**. Alle Agenten agieren innerhalb ihrer definierten Rollen und Verantwortlichkeiten.
+---
 
-## Beitrag
+## 📦 Installation
 
-Beiträge sind willkommen! Bitte lesen Sie die `CONTRIBUTING.md` (wird erstellt) für Richtlinien.
+```bash
+# Repository klonen
+git clone [REPO_URL]
 
-## Lizenz
+# Abhängigkeiten installieren
+cd code
+composer install
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert. Weitere Details finden Sie in der `LICENSE.md` (wird erstellt) Datei.
+# Datenbank konfigurieren
+# Datenbank-Migrationen ausführen
 
-## Kontakt
+# Webserver starten
+```
 
-Bei Fragen oder Problemen wenden Sie sich bitte an die Projektbetreuer.
+---
+
+## 🔌 API Endpunkte
+
+Die REST-API ist über `/api/v1/...` erreichbar. Details in `API.md`.
+
+---
+
+## 📞 Support
+
+Bei Fragen oder Problemen: [Support-Ticket](mailto:support@community-shop.de)
+
+---
+
+## 📄 Lizenz
+
+MIT License - Details in `LICENSE.md`
+
+---
+
+<div align="center">
+
+**[GitHub Repo]** **[Dokumentation]** **[Issues]**
+
+</div>

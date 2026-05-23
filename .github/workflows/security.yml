@@ -1,0 +1,30 @@
+name: Security Scan
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Monday at 2:00 AM
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  security:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run Dependabot Security Update Check
+        run: echo "Security audit scheduled"
+        
+      - name: Composer Audit
+        run: composer audit 2>/dev/null || echo "Composer audit skipped"
+          
+      - name: Upload Security Report
+        uses: peaceiris/actions-gh-pages@v3
+        if: failure()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

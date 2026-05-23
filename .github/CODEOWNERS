@@ -1,0 +1,19 @@
+# Overall code owner
+* @chris1971nrw
+
+# Code owners by path
+/app/* @chris1971nrw
+/src/* @chris1971nrw
+/controllers/* @chris1971nrw
+/models/* @chris1971nrw
+/services/* @chris1971nrw
+
+# Ignore third-party code
+/vendor/*
+
+# Documentation owners
+/doc/* @chris1971nrw
+/README.md @chris1971nrw
+
+# Ignore security
+/.github/* @chris1971nrw

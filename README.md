@@ -50,11 +50,13 @@ Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten
 
 ### 🎬 YouTube Video
 
-**Status:** 🚧 In Bearbeitung (via Notebook LLM)
+**Status:** ✅ **LIVE** 🎉
 
 **Title:** "Wir bauen einen open-source Amazon Affiliate Shop mit PHP & Laravel!"
 
-**Description:**
+**URL:** https://www.youtube.com/watch?v=pGYTQDRBVgk
+
+**Beschreibung:**
 In diesem Video zeige ich, wie wir einen community-gesteuerten Amazon Affiliate Shop mit PHP 8.3, Laravel 11.x und Bootstrap 5 bauen!
 
 🛒 Features:
@@ -75,10 +77,7 @@ In diesem Video zeige ich, wie wir einen community-gesteuerten Amazon Affiliate 
 - GitHub: https://github.com/chris1971nrw/community-shop
 - Demo: https://chris1971nrw.github.io/community-shop/
 - Documentation: https://chris1971nrw.github.io/community-shop/docs/
-
-**YouTube URL:** [Wird später aktualisiert]
-
-**Voice Note:** [Wird später aktualisiert]
+- Contributing: https://github.com/chris1971nrw/community-shop/blob/main/CONTRIBUTING.md
 
 #PHP #Laravel #OpenSource #AmazonAffiliate #Programming #YouTube #Shop #Laravel11 #PHP8
 
@@ -89,7 +88,7 @@ In diesem Video zeige ich, wie wir einen community-gesteuerten Amazon Affiliate 
 #### Twitter/X
 
 ```markdown
-🎬 [Video] Wir bauen einen open-source Amazon Affiliate Shop!
+🎬 [VIDEO] Wir bauen einen open-source Amazon Affiliate Shop!
 
 🛒 Features:
 ✅ Produkt-Katalog
@@ -110,7 +109,7 @@ Title: [VIDEO] Open Source Amazon Affiliate Shop - YouTube Video
 Body:
 Hey everyone, wir haben ein YouTube Video veröffentlicht!
 
-🎬 [VIDEO] [Link wird später aktualisiert]
+🎬 [VIDEO] https://www.youtube.com/watch?v=pGYTQDRBVgk
 
 🔗 GitHub: https://github.com/chris1971nrw/community-shop
 🌐 Demo: https://chris1971nrw.github.io/community-shop/
@@ -122,6 +121,8 @@ Hey everyone, wir haben ein YouTube Video veröffentlicht!
 
 ```markdown
 🎬 [VIDEO] Amazon Affiliate Shop Launch!
+
+🎬 https://www.youtube.com/watch?v=pGYTQDRBVgk
 
 🔗 GitHub: https://github.com/chris1971nrw/community-shop
 🌐 Demo: https://chris1971nrw.github.io/community-shop/
@@ -226,6 +227,7 @@ Beitritt:
 ### Milestone 1: MVP Launch (Juni 2026)
 - [x] Landing Page Live
 - [x] Dokumentationen
+- [x] **YouTube Video Live** 🎬
 - [ ] Database Schema
 - [ ] API Endpunkte
 
@@ -245,7 +247,7 @@ Beitritt:
 - 💻 **Pull Requests** willkommen
 - 📝 **Dokumentation** verbessern
 - 🎨 **Design** Vorschläge
-- 🎬 **YouTube Video** erstellen (via Notebook LLM)
+- 🎬 **YouTube Video** ✅ (Live!)
 - 📱 **Social Media** teilen
 
 ### Guidelines
@@ -255,7 +257,7 @@ Beitritt:
 - Documentation: Markdown
 - Issues: Label & Milestone
 - PRs: Code Review vor Merge
-- YouTube: Video erstellen & teilen
+- YouTube: Video erstellen & teilen ✅
 
 ---
 
@@ -268,5 +270,4 @@ MIT License - Community-getragen
 **Version**: 0.1.0 (MVP)  
 **Last Updated**: 2026-05-24  
 **Made with ❤️ by the Community**  
-**🎬 YouTube Video**: [Wird später aktualisiert]  
-**🎤 Voice Note**: [Wird später aktualisiert]
+**🎬 YouTube Video**: [https://www.youtube.com/watch?v=pGYTQDRBVgk](https://www.youtube.com/watch?v=pGYTQDRBVgk)

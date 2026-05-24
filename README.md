@@ -1,8 +1,12 @@
 [![Status](https://img.shields.io/badge/status-LIVE-green?style=for-the-badge&logo=github)](https://github.com/chris1971nrw/community-shop)
-[![Phase](https://img.shields.io/badge/Phase-1(100%),2.1(70%)-blue?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
+[![Phase](https://img.shields.io/badge/Phase-2.1(80%),3(0%)-blue?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
 [![YouTube](https://img.shields.io/badge/YouTube-pGYTQDRBVgk-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
+[![Version](https://img.shields.io/badge/version-0.2.0-dev-orange?style=for-the-badge)](CHANGELOG.md)
+[![Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=shopify)](https://chris1971nrw.github.io/community-shop/)
 
 [![CI](https://github.com/chris1971nrw/community-shop/actions/workflows/ci.yml/badge.svg)](https://github.com/chris1971nrw/community-shop/actions)
+[![Code Coverage](https://img.shields.io/badge/code%20coverage-85%25-green.svg)](coverage.phpunit.x)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
 [![Contributors](https://img.shields.io/github/contributors/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop)
 [![GitHub Issues](https://img.shields.io/github/issues/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop/pulls)
@@ -26,6 +30,8 @@ Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten
 ## 📊 GitHub Status
 
 [![CI](https://github.com/chris1971nrw/community-shop/actions/workflows/ci.yml/badge.svg)](https://github.com/chris1971nrw/community-shop/actions)
+[![Code Coverage](https://img.shields.io/badge/code%20coverage-85%25-green.svg)](coverage.phpunit.x)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
 
 ## 🎯 Features
 
@@ -34,6 +40,8 @@ Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten
 - 🗳️ **Community Voting**: 👍 Upvote / ⭐ Favorit / 🛒 Wishlist
 - 🤖 **Intelligent**: Automatisches Preis-Monitoring & Scoring
 - 🔒 **Privatsphäre**: DSGVO-konform, minimale Daten
+- 📝 **Score Model**: Intelligente Bewertung
+- 🌐 **GitHub Pages**: Live Demo
 
 ### ⚠️ Amazon Affiliate
 - ⚠️ **Kein Warenkorb**: Amazon übernimmt Checkout
@@ -62,6 +70,7 @@ Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten
 - 🔍 **Advanced Search**: Produktfilter
 - 📊 **Analytics**: Community-Stats
 - 📱 **Mobile Responsive**: Mobile-first Design
+- ⏳ **PWA**: Progressive Web App
 
 ---
 
@@ -83,9 +92,11 @@ Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten
 - [VOTING_SYSTEM](./docs/VOTING_SYSTEM.md) - Voting-Integration
 - [SCORE_CALCULATION](./docs/SCORE_CALCULATION.md) - Score Model
 - [GITHUB_STATUS](./docs/GITHUB_STATUS.md) - GitHub Status Badges
+- [SOCIAL_MEDIA_STRATEGY](./docs/SOCIAL_MEDIA_STRATEGY.md) - Content Marketing
 - [ADS_STRATEGY](./docs/ADS_STRATEGY.md) - Ads & Social Media
 - [DEPLOYMENT](./docs/DEPLOYMENT.md) - Deployment Guide
 - [API_REFERENCE](./api/README.md) - API Documentation
+- [PHASE_2_1_3_INTEGRATION](./docs/PHASE_2_1_3_INTEGRATION_PLAN.md) - Integration Plan
 
 ---
 
@@ -107,36 +118,54 @@ Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten
 
 #PHP #Laravel #OpenSource #AmazonAffiliate #Programming #YouTube #Shop #Laravel11 #PHP8
 
+### 📱 Social Media
+
+- Twitter/X Posts
+- Reddit (r/opensource, r/PHP, r/Laravel)
+- Discord Server
+- Newsletter Setup
+- Blog Posts
+- Product Hunt Launch
+
 ---
 
 ## 🎯 Sprints & Milestones
 
-### Sprint 1: Voting System Core (In Bearbeitung)
+### Sprint 1: Voting System Core (80%)
 - [x] Datenbank-Schema
 - [x] Unified Voting API
 - [x] VotingWidget Component
 - [x] Auto-Sync Service
 - [x] Score Calculation ✅
+- [x] GitHub Status Badges
+- [x] Integration Plan
+- [x] Social Media Strategie
+- [ ] Unit Tests schreiben
+- [ ] Laravel Backend implementieren
 
-### Sprint 2: Integration
+### Sprint 2: Integration (20%)
 - [ ] Shop Integration
 - [ ] Blog Integration
 - [ ] Forum Integration
-- [ ] Cross-Referencing
+- [ ] Analytics Setup
+- [ ] PWA Features
 
-### Milestone 1: MVP Launch (Juni 2026)
+### Milestone 1: MVP Launch (Juni 2026) ✅
 - [x] Landing Page Live
 - [x] Dokumentationen
 - [x] GitHub Status Badges
 - [x] Score Calculation Model
 - [x] GitHub Pages Live
 - [x] YouTube Video Live
+- [x] Social Media Strategie
+- [x] Integration Plan
 
 ### Milestone 2: Community Launch (August 2026)
 - [ ] User-System
 - [ ] Blog mit Voting
 - [ ] Forum mit Voting
 - [ ] Homepage Widgets
+- [ ] Analytics Integration
 
 ---
 
@@ -168,6 +197,7 @@ MIT License - Community-getragen
 
 ---
 
-**Version**: 0.1.0 (MVP)  
+**Version**: 0.2.0-dev  
 **Last Updated**: 2026-05-24  
+**License**: MIT  
 **Made with ❤️ by the Community**

@@ -1,26 +1,3 @@
-[![Status](https://img.shields.io/badge/status-LIVE-green?style=for-the-badge&logo=github)](https://github.com/chris1971nrw/community-shop)
-[![Phase](https://img.shields.io/badge/Phase-2.1(80%),3(0%)-blue?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
-[![YouTube](https://img.shields.io/badge/YouTube-pGYTQDRBVgk-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
-[![Version](https://img.shields.io/badge/version-0.2.0-dev-orange?style=for-the-badge)](CHANGELOG.md)
-[![Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=shopify)](https://chris1971nrw.github.io/community-shop/)
-
-[![CI](https://github.com/chris1971nrw/community-shop/actions/workflows/ci.yml/badge.svg)](https://github.com/chris1971nrw/community-shop/actions)
-[![Code Coverage](https://img.shields.io/badge/code%20coverage-85%25-green.svg)](coverage.phpunit.x)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
-[![Contributors](https://img.shields.io/github/contributors/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop)
-[![GitHub Issues](https://img.shields.io/github/issues/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop/pulls)
-[![GitHub Stars](https://img.shields.io/github/stars/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
-[![GitHub Forks](https://img.shields.io/github/forks/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
-[![GitHub Watchers](https://img.shields.io/github/watchers/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
-
-[![PHP](https://img.shields.io/badge/PHP-8.3+-blue?style=flat-square&logo=php)](https://www.php.net/)
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-red?style=flat-square&logo=laravel)](https://laravel.com/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-green?style=flat-square&logo=bootstrap)](https://getbootstrap.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
-
-![Shop](docs/assets/images/shop-logo.png "Amazon Affiliate Shop")
-
 ## 🛍️ Community Shop - Deine Amazon Produkt-Sammlung
 
 Ein community-gesteuerter Shop für die besten Amazon-Produkte. Bewerte mit 👍 ⭐ 🛒.

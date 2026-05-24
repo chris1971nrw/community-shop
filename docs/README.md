@@ -166,12 +166,40 @@ Werde Teil der Community!
 
 ## 📚 Weiterführende Dokumentation
 
-- [API Dokumentation]
-- [Entwickler Guide]
-- [Contributing]
-- [Changelog]
+- [API Dokumentation](api/README.md)
+- [Entwickler Guide](docs/DEVELOPER_GUIDE.md)
+- [Contributing](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+- [Score Calculation](docs/SCORE_CALCULATION.md)
+- [Integration Plan](docs/PHASE_2_1_3_INTEGRATION_PLAN.md)
+- [GitHub Status](docs/GITHUB_STATUS.md)
+
+## 🚧 Aktuelle Entwicklung
+
+**Status**: MVP Launch ✅ | Phase 2.1.2: Score Calculation 🚧 | Phase 3: Affiliate Features ⏳
+
+**GitHub**: https://github.com/chris1971nrw/community-shop  
+**Demo**: https://chris1971nrw.github.io/community-shop/  
+**YouTube Video**: https://www.youtube.com/watch?v=pGYTQDRBVgk
+
+**Features**:
+- ✅ Produkt-Katalog (Amazon Links)
+- ✅ Community Voting (👍 ⭐ 🛒)
+- ✅ Preis-Monitoring
+- ✅ RESTful API
+- ✅ Open Source (MIT)
+- ⏳ Score-Modell Entwicklung
+- ⏳ Affiliate-Features
+
+**Next Milestones**:
+- [ ] Score Calculation finalisieren
+- [ ] Integration in Shop & Blog
+- [ ] Newsletter & Analytics
+- [ ] Mobile Responsive
 
 ---
 
-**Version**: 0.1.0 (MVP)
+**Version**: 0.2.0-dev
+**Last Updated**: 2026-05-24
 **License**: MIT
+**Made with ❤️ by the Community**

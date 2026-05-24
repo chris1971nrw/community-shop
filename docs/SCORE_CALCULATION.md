@@ -1,374 +1,144 @@
-# 🎯 Score Calculation Model
+# 🎯 Score Calculation - Voting Score Modell
 
-## 📋 Übersicht
+## Overview
 
-Dieses Dokument beschreibt das **Score Calculation Model** für den Amazon Affiliate Shop. Das Modell bewertet Produkte basierend auf Community-Voten (👍 ⭐ 🛒) und zeigt die Top-Produkte.
+Das Score-Modell bewertet Produkte basierend auf Community-Voting mit den Buttons 👍 (Like) ⭐ (Favorite) 🛒 (Cart).
 
----
-
-## 🎯 Ziele
-
-1. **Community-Voten gewichten** (👍 ⭐ 🛒)
-2. **Fairness sicherstellen** (verhindern Spam)
-3. **Relevanz bewerten** (Zeit & Nutzung)
-4. **Top-Produkte identifizieren**
-5. **Algorithmus-Transparenz**
-
----
-
-## 📐 Voting-Typen
-
-### 1. **Upvote (👍)** - Qualität
-**Bedeutung:** Das Produkt ist gut, nützlich, empfehlenswert
-
-**Gewicht:** 1.0 Punkte
-
-**Beispiel:**
-```
-👍 👍 👍 👍 👍 = 5.0 Punkte
-```
-
-### 2. **Favorite (⭐)** - Liebling
-**Bedeutung:** Das Produkt ist mein Favorit, ich liebe es
-
-**Gewicht:** 1.5 Punkte
-
-**Beispiel:**
-```
-⭐ ⭐ ⭐ = 4.5 Punkte
-```
-
-### 3. **Wishlist (🛒)** - Wishlist
-**Bedeutung:** Ich möchte dieses Produkt kaufen, gut zum Vergleich
-
-**Gewicht:** 2.0 Punkte
-
-**Beispiel:**
-```
-🛒 🛒 🛒 = 6.0 Punkte
-```
-
----
-
-## 🧮 Score-Formel
-
-### Basis-Formel
+## Score Formel
 
 ```
-Score = (Upvotes × 1.0) + (Favorites × 1.5) + (Wishlists × 2.0)
+Score = (Likes × 1) + (Favorites × 2) + (Carts × 3) + (Views × 0.1) - (DaysOld × 0.05)
 ```
 
-### Erweiterte Formel (Zeit-basiert)
+### Gewichtungen
 
-```
-Score = (Upvotes × 1.0 + Favorites × 1.5 + Wishlists × 2.0) / (Log(Anzahl_votes) + 1) × (1 / Zeit_factor)
-```
+| Vote Type | Gewicht | Bedeutung |
+|-----------|---------|-----------|
+| 👍 Like | 1 | Produkt gefällt |
+| ⭐ Favorite | 2 | Produkt ist besonders |
+| 🛒 Cart | 3 | Kaufintention hoch |
+| 👁️ Views | 0.1 | Populärität |
+| ⏰ Time | -0.05/day | Fading relevance |
 
-### Spam-Schutz
+## Implementierung
 
-```
-Max_Score_per_Timestamp = 10 Punkte pro Stunde
-Min_Zeit_zwischen_Voten = 60 Sekunden
-```
-
----
-
-## 📊 Beispiel
-
-### Produkt A
-```
-👍 × 10 = 10.0 Punkte
-⭐ × 5  = 7.5 Punkte
-🛒 × 3  = 6.0 Punkte
-───────
-Total: 23.5 Punkte
-```
-
-### Produkt B
-```
-👍 × 5 = 5.0 Punkte
-⭐ × 10 = 15.0 Punkte
-🛒 × 2 = 4.0 Punkte
-───────
-Total: 24.0 Punkte
-```
-
-### Ranking
-
-```
-1. Produkt B: 24.0 Punkte ⭐⭐⭐
-2. Produkt A: 23.5 Punkte ⭐⭐
-```
-
----
-
-## 🧠 Algorithmus
-
-### Schritt 1: Voten sammeln
-
-```php
-public function collectVotes(Product $product): array
-{
-    $votes = $product->votes()->where('created_at', '>', now()->subHour())->get();
-    
-    return [
-        'upvotes' => $votes->where('type', 'upvote')->count(),
-        'favorites' => $votes->where('type', 'favorite')->count(),
-        'wishlists' => $votes->where('type', 'wishlist')->count(),
-    ];
-}
-```
-
-### Schritt 2: Score berechnen
-
-```php
-public function calculateScore($upvotes, $favorites, $wishlists)
-{
-    $baseScore = ($upvotes * 1.0) + ($favorites * 1.5) + ($wishlists * 2.0);
-    $voteCount = $upvotes + $favorites + $wishlists;
-    $timeFactor = now()->diffInMinutes($product->created_at) / 60; // Minuten
-    
-    // Logarithmische Dämpfung für viele Votes
-    $logFactor = log($voteCount + 1, 10);
-    
-    // Score berechnen
-    $score = $baseScore / (($logFactor + 1) * (1 + $timeFactor / 30));
-    
-    return round($score, 2);
-}
-```
-
-### Schritt 3: Produkte sortieren
-
-```php
-public function getTopProducts(int $limit = 10)
-{
-    $products = Product::with(['votes' => function($query) {
-        $query->where('created_at', '>', now()->subDay());
-    }])->get();
-    
-    $topProducts = [];
-    
-    foreach ($products as $product) {
-        $votes = $product->votes;
-        
-        $upvotes = collect($votes)->where('type', 'upvote')->count();
-        $favorites = collect($votes)->where('type', 'favorite')->count();
-        $wishlists = collect($votes)->where('type', 'wishlist')->count();
-        
-        $score = $this->calculateScore($upvotes, $favorites, $wishlists);
-        
-        $topProducts[] = [
-            'product' => $product,
-            'score' => $score,
-        ];
-    }
-    
-    // Sortieren nach Score (absteigend)
-    usort($topProducts, function($a, $b) {
-        return $b['score'] <=> $a['score'];
-    });
-    
-    return $topProducts;
-}
-```
-
----
-
-## 🔐 Spam-Schutz
-
-### Rate-Limiting
-
-```php
-public function vote(Request $request, Product $product)
-{
-    // Prüfen ob User bereits abgestimmt hat
-    if ($product->votedBy($request->user())) {
-        return response()->json(['message' => 'Du hast bereits abgestimmt!'], 400);
-    }
-    
-    // Prüfen ob zu viel gestimmt wurde (Spam)
-    $hourlyVotes = Vote::where('user_id', $request->user())
-        ->where('product_id', $product->id)
-        ->where('created_at', '>', now()->subHour())
-        ->count();
-    
-    if ($hourlyVotes > 10) {
-        return response()->json(['message' => 'Zu viele Stimmen! Warte bitte eine Stunde.'], 429);
-    }
-    
-    // Vote erstellen
-    Vote::create([
-        'product_id' => $product->id,
-        'user_id' => $request->user()->id,
-        'type' => $request->input('type'),
-    ]);
-    
-    return response()->json(['message' => 'Vote erstellt!'], 201);
-}
-```
-
-### Zeit-basierte Vergesslung
-
-```php
-public function decayVotes()
-{
-    // Votes älter als 30 Tage reduzieren
-    Vote::where('created_at', '<', now()->subDay(30))
-        ->update(['score_weight' => $this->decayWeight($this->lastWeight)]);
-}
-```
-
----
-
-## 📊 Unit Tests
-
-### Test 1: Basis-Formel
-
-```php
-public function testCalculateScore()
-{
-    $score = $this->calculateScore(10, 5, 3); // 10 upvotes, 5 favorites, 3 wishlists
-    $expected = (10 * 1.0) + (5 * 1.5) + (3 * 2.0); // 23.5
-    
-    $this->assertEquals(round($score, 2), round($expected, 2));
-}
-```
-
-### Test 2: Spam-Schutz
-
-```php
-public function testRateLimit()
-{
-    $product = Product::factory()->create();
-    
-    // Simuliere 11 Votes in einer Stunde
-    for ($i = 0; $i < 11; $i++) {
-        $this->postJson("/api/v1/products/{$product->id}/vote", [
-            'type' => 'upvote',
-        ])->assertStatus(429);
-    }
-}
-```
-
-### Test 3: Gewichtung
-
-```php
-public function testWeighting()
-{
-    $upvoteScore = $this->calculateScore(1, 0, 0); // 1.0
-    $favoriteScore = $this->calculateScore(0, 1, 0); // 1.5
-    $wishlistScore = $this->calculateScore(0, 0, 1); // 2.0
-    
-    $this->assertEquals($upvoteScore, 1.0);
-    $this->assertEquals($favoriteScore, 1.5);
-    $this->assertEquals($wishlistScore, 2.0);
-}
-```
-
----
-
-## 🧪 Integration
-
-### API-Endpunkt
-
-```php
-/**
- * @GET /api/v1/products/{id}/score
- * Beschreibung: Score für ein Produkt abrufen
- * Antwort:
- * {
- *   "product_id": 1,
- *   "upvotes": 10,
- *   "favorites": 5,
- *   "wishlists": 3,
- *   "score": 23.5,
- *   "rank": 1
- * }
- */
-```
-
-### Response
-
-```json
-{
-  "product_id": 1,
-  "product_name": "HP EliteBook 840 G8",
-  "upvotes": 10,
-  "favorites": 5,
-  "wishlists": 3,
-  "score": 23.5,
-  "rank": 1
-}
-```
-
----
-
-## 🎯 Performance-Optimierung
-
-### Caching
-
-```php
-$topProducts = Cache::remember('top_products', 300, function () {
-    return $this->getTopProducts(10);
-});
-```
-
-### Datenbank-Index
+### 1. Database Schema
 
 ```sql
-CREATE INDEX idx_votes_created_at ON votes(created_at);
-CREATE INDEX idx_votes_user_id ON votes(user_id);
-CREATE INDEX idx_votes_product_id ON votes(product_id);
+-- votes Tabelle
+CREATE TABLE votes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    product_id INT NOT NULL,
+    vote_type ENUM('like', 'favorite', 'cart') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ip_address VARCHAR(45),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- views Tabelle
+CREATE TABLE views (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    product_id INT NOT NULL,
+    viewed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    user_agent TEXT,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- sync_log Tabelle
+CREATE TABLE sync_log (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    action VARCHAR(50) NOT NULL,
+    product_id INT,
+    previous_score DECIMAL(10,2),
+    new_score DECIMAL(10,2),
+    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 ```
 
----
-
-## 📊 Monitoring
-
-### Metriken
+### 2. Score Calculation Service
 
 ```php
-public function getMetrics()
-{
-    return [
-        'total_products' => Product::count(),
-        'total_votes' => Vote::count(),
-        'average_score' => Vote::avg('score'),
-        'top_product' => Product::orderBy('score', 'desc')->first(),
-        'spam_attempts' => $this->getSpamAttempts(),
-    ];
+// ScoreCalculator.php
+class ScoreCalculator {
+    private $db;
+    
+    public function calculate(int $productId): float {
+        // Holen aller Votes
+        $likes = $this->getVoteCount($productId, 'like');
+        $favorites = $this->getVoteCount($productId, 'favorite');
+        $carts = $this->getVoteCount($productId, 'cart');
+        
+        // Views aus der letzten Woche
+        $views = $this->getWeeklyViews($productId);
+        
+        // Produkt-Alter in Tagen
+        $daysOld = $this->getProductAgeDays($productId);
+        
+        // Score berechnen
+        $score = ($likes * 1) + 
+                  ($favorites * 2) + 
+                  ($carts * 3) + 
+                  ($views * 0.1) - 
+                  ($daysOld * 0.05);
+        
+        // Rundung auf 2 Dezimalstellen
+        return round($score, 2);
+    }
+    
+    private function getVoteCount($productId, $type) {
+        // SQL Query...
+    }
+    
+    private function getWeeklyViews($productId) {
+        // SQL Query...
+    }
 }
 ```
 
-### Alerts
+### 3. Auto-Sync Service
 
 ```php
-if ($spamAttempts > 100) {
-    Alert::channel('slack')->info('Spam-Detektion!');
+class SyncService {
+    public function syncProduct($product) {
+        // Alte Score holen
+        $oldScore = ScoreCalculator::calculate($product->id);
+        
+        // Score neu berechnen
+        $newScore = ScoreCalculator::calculate($product->id);
+        
+        // Sync-Log schreiben
+        $this->logSync($product->id, 'score_update', $oldScore, $newScore);
+        
+        // Produktdaten aktualisieren
+        Product::where('id', $product->id)->update(['score' => $newScore]);
+        
+        return [
+            'product_id' => $product->id,
+            'old_score' => $oldScore,
+            'new_score' => $newScore,
+            'changed_at' => now()
+        ];
+    }
 }
 ```
 
----
+## Testing
 
-## 🔮 Zukünftige Verbesserungen
+### Unit Tests
 
-1. **Maschinelles Lernen:**
-   - Benutzer-Verhaltensanalyse
-   - Empfehlungssystem
-   - Trend-Erkennung
+```bash
+# Unit Tests schreiben
+php artisan test --filter=ScoreCalculator
 
-2. **Social Proof:**
-   - "X Personen haben gekauft"
-   - "X Personen sind jetzt interessiert"
-   - "Trending: Top 10"
+# Expected Output:
+# ✓ ScoreCalculator::it_calculates_score_with_votes
+# ✓ ScoreCalculator::it_ignores_votes_older_than_30_days
+# ✓ ScoreCalculator::it_considers_recent_views
+```
 
-3. **Analytics:**
-   - Voting-Statistiken
-   - User-Engagement
-   - Conversion-Tracking
+## Next Steps
 
----
-
-**Version:** 0.1.0  
-**Last Updated:** 2026-05-24
+- [ ] Score-Modell in VotingAPI integrieren
+- [ ] Caching für Score-Updates implementieren
+- [ ] Monitoring & Alerts für Score-Änderungen
+- [ ] A/B Testing für Gewichtungen

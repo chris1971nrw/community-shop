@@ -1,126 +1,199 @@
-# 📊 GitHub Status Badge
+# 📊 GitHub Status Badges & Dashboard
 
-## 🎯 Verwendung
+## Overview
 
+GitHub Status Badges für den Community Shop Projekt zeigen den aktuellen Projektstatus, Build-Status, Code-Qualität und Community-Metriken.
+
+## Available Badges
+
+### Core Status
+
+#### Build Status
 ```markdown
-[![GitHub Status](https://img.shields.io/badge/status-Active-green)](https://github.com/chris1971nrw/community-shop)
-[![Phase](https://img.shields.io/badge/Phase-1%20(100%25)-blue)](https://github.com/chris1971nrw/community-shop)
-[![Voting](https://img.shields.io/badge/Voting-2.1%20(70%25)-yellow)](https://github.com/chris1971nrw/community-shop)
-[![YouTube](https://img.shields.io/badge/YouTube-LIVE-red)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
+[![GitHub Actions Status](https://img.shields.io/github/actions/workflow/status/chris1971nrw/community-shop/ci.yml?label=Build&logo=github&logoColor=white)](https://github.com/chris1971nrw/community-shop/actions)
 ```
 
----
-
-## 📊 **GitHub Status Badges**
-
-### 🏠 Repository Status
-
+#### License
 ```markdown
-[![Status](https://img.shields.io/badge/status-LIVE-green?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ```
 
-### 📱 Social Media
-
+#### Version
 ```markdown
-[![YouTube](https://img.shields.io/badge/YouTube-pGYTQDRBVgk-red?style=for-the-badge)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
-[![GitHub Stars](https://img.shields.io/github/stars/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
-[![GitHub Forks](https://img.shields.io/github/forks/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
-[![GitHub Watchers](https://img.shields.io/github/watchers/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
+[![Version](https://img.shields.io/badge/version-0.2.0-dev-orange.svg)](CHANGELOG.md)
 ```
 
-### 📈 Progress Badges
-
+#### PHP Version
 ```markdown
-[![Phase 1](https://img.shields.io/badge/Phase%201-100%25-green?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
-[![Phase 2.1](https://img.shields.io/badge/Phase%202.1-70%25-yellow?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
-[![Phase 3](https://img.shields.io/badge/Phase%203-0%25-gray?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
+[![PHP Version](https://img.shields.io/badge/PHP-8.3+-green.svg)](https://www.php.net/downloads)
 ```
 
-### 🛠️ Tech Stack
+### Code Quality
 
+#### Code Coverage
 ```markdown
-[![PHP](https://img.shields.io/badge/PHP-8.3+-blue?style=for-the-badge)](https://www.php.net/)
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-red?style=for-the-badge)](https://laravel.com/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-green?style=for-the-badge)](https://getbootstrap.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Code Coverage](https://img.shields.io/badge/code%20coverage-85%25-green.svg)](coverage.phpunit.x)
 ```
 
-### 🔒 Security
+#### Test Status
+```markdown
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
+```
+
+#### Linting
+```markdown
+[![Linting](https://img.shields.io/badge/linting-clean-green.svg)](.)
+```
+
+### Community Metrics
+
+#### Stars
+```markdown
+[![GitHub Stars](https://img.shields.io/github/stars/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop/stargazers)
+```
+
+#### Forks
+```markdown
+[![GitHub Forks](https://img.shields.io/github/forks/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop/network/members)
+```
+
+#### Watchers
+```markdown
+[![GitHub Watchers](https://img.shields.io/github/watchers/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop/watchers)
+```
+
+### Social Media
+
+#### YouTube Video
+```markdown
+[![YouTube Video](https://img.shields.io/badge/YouTube-Watch%20Video-red?logo=youtube)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
+```
+
+#### Twitter/X
+```markdown
+[![Twitter](https://img.shields.io/twitter/url?label=Follow&url=https%3A%2F%2Ftwitter.com%2Fchris1971nrw)](https://twitter.com/chris1971nrw)
+```
+
+### Project Health
+
+#### Last Commit
+```markdown
+[![Last Commit](https://img.shields.io/github/last-commit/chris1971nrw/community-shop?logo=git)](https://github.com/chris1971nrw/community-shop/commits/main)
+```
+
+#### Issues Open
+```markdown
+[![Issues](https://img.shields.io/github/issues/chris1971nrw/community-shop?label=Open%20Issues)](https://github.com/chris1971nrw/community-shop/issues)
+```
+
+#### PRs Open
+```markdown
+[![PRs](https://img.shields.io/github/issues-pr/chris1971nrw/community-shop?label=Open%20PRs)](https://github.com/chris1971nrw/community-shop/pulls)
+```
+
+## Usage in README
+
+Combine multiple badges in your GitHub README:
+
+```markdown
+# 🛒 Community Shop
+
+[![Build](https://img.shields.io/github/actions/workflow/status/chris1971nrw/community-shop/ci.yml?label=Build&logo=github)](https://github.com/chris1971nrw/community-shop/actions)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.2.0-dev-orange.svg)](CHANGELOG.md)
+[![PHP](https://img.shields.io/badge/PHP-8.3+-green.svg)](https://www.php.net/downloads)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
+[![Code Coverage](https://img.shields.io/badge/code%20coverage-85%25-green.svg)](coverage.phpunit.x)
+[![YouTube](https://img.shields.io/badge/YouTube-Watch%20Video-red?logo=youtube)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
+
+## 🛍️ Features
+
+- ✅ Produkt-Katalog (Amazon Links)
+- ✅ Community Voting (👍 ⭐ 🛒)
+- ✅ Preis-Monitoring
+- ✅ RESTful API
+- ✅ Open Source (MIT)
+- ⏳ Score-Modell Entwicklung
+- ⏳ Affiliate-Features
+```
+
+## Custom Badges
+
+### Custom Build Status
 
 ```markdown
 [![CI](https://github.com/chris1971nrw/community-shop/actions/workflows/ci.yml/badge.svg)](https://github.com/chris1971nrw/community-shop/actions)
-[![Coverage](https://img.shields.io/badge/coverage-80%25+-green?style=for-the-badge)](https://github.com/chris1971nrw/community-shop/actions)
-[![Tests](https://img.shields.io/badge/tests-PHPUnit-blue?style=for-the-badge)](https://github.com/chris1971nrw/community-shop/actions)
 ```
+
+### Release Badges
+
+```markdown
+[![Latest Release](https://img.shields.io/github/v/release/chris1971nrw/community-shop?include_prereleases)](https://github.com/chris1971nrw/community-shop/releases/latest)
+```
+
+### Download Badges
+
+```markdown
+[![Downloads](https://img.shields.io/github/downloads/chris1971nrw/community-shop/total)](https://github.com/chris1971nrw/community-shop/releases)
+```
+
+### GitHub Sponsors
+
+```markdown
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-orange.svg?logo=github)](https://github.com/sponsor/chris1971nrw)
+```
+
+## Badge Reference Table
+
+| Badge | URL | Description |
+|-------|-----|-------------|
+| Build | `/actions/workflows/{name}.yml/badge.svg` | CI/CD Pipeline Status |
+| License | `https://img.shields.io/badge/license-{type}-blue.svg` | License Type |
+| Version | `https://img.shields.io/badge/version-{version}-orange.svg` | Project Version |
+| PHP | `https://img.shields.io/badge/PHP-{version}-green.svg` | Required PHP Version |
+| Tests | `https://img.shields.io/badge/tests-{status}-brightgreen.svg` | Test Results |
+| Coverage | `https://img.shields.io/badge/code%20coverage-{percent}-green.svg` | Code Coverage % |
+| GitHub Actions | `https://github.com/{user}/{repo}/actions/workflows/{name}.yml/badge.svg` | Specific Workflow Status |
+| Releases | `https://img.shields.io/github/v/release/{user}/{repo}` | Latest Release |
+| Downloads | `https://img.shields.io/github/downloads/{user}/{repo}/total` | Total Downloads |
+| Issues | `https://img.shields.io/github/issues/{user}/{repo}` | Open Issues Count |
+| PRs | `https://img.shields.io/github/issues-pr/{user}/{repo}` | Open PRs Count |
+| Stars | `https://img.shields.io/github/stars/{user}/{repo}?style=social` | GitHub Stars (Social Style) |
+| Forks | `https://img.shields.io/github/forks/{user}/{repo}?style=social` | GitHub Forks (Social Style) |
+| Watchers | `https://img.shields.io/github/watchers/{user}/{repo}?style=social` | GitHub Watchers (Social Style) |
+| Last Commit | `https://img.shields.io/github/last-commit/{user}/{repo}` | Last Commit Date |
+
+## Maintenance
+
+### Updating Badge Values
+
+**Version Badge:** Update in `CHANGELOG.md` or create a release
+
+**Build Status Badge:** GitHub Actions automatically updates
+
+**Test Coverage Badge:** Manually update based on coverage.phpunit.xml
+
+**Issue/PR Badge:** GitHub automatically updates
+
+**YouTube Badge:** Update URL when new video is uploaded
+
+### Best Practices
+
+1. **Keep badges relevant**: Remove badges for discontinued features
+2. **Use social-style badges for social metrics**: Stars, forks, watchers
+3. **Link to relevant pages**: Badge links should point to detailed info
+4. **Group related badges**: Build, test, and quality badges together
+5. **Limit badge count**: Too many badges can clutter the README
+
+## Contributing
+
+Add new badges by:
+
+1. Adding badge template to this documentation
+2. Updating the reference table
+3. Creating example usage in README
 
 ---
 
-## 📝 **README.md Integration**
-
-```markdown
-# 🛍️ Amazon Affiliate Shop
-
-[![Status](https://img.shields.io/badge/status-LIVE-green?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
-[![YouTube](https://img.shields.io/badge/YouTube-pGYTQDRBVgk-red?style=for-the-badge)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
-[![GitHub Stars](https://img.shields.io/github/stars/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
-[![Phase](https://img.shields.io/badge/Phase-1%20(100%25),%202.1%20(70%25)-blue?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
-
-```
-
----
-
-## 🎯 **Empfohlene Badges**
-
-### Haupt-Badges
-
-```markdown
-[![Status](https://img.shields.io/badge/status-LIVE-green?style=for-the-badge&logo=github)](https://github.com/chris1971nrw/community-shop)
-[![Phase](https://img.shields.io/badge/Phase-1%20(100%25),%202.1%20(70%25)-blue?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
-[![YouTube](https://img.shields.io/badge/YouTube-pGYTQDRBVgk-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
-```
-
-### Projekt-Badges
-
-```markdown
-[![PHP](https://img.shields.io/badge/PHP-8.3+-blue?style=for-the-badge&logo=php)](https://www.php.net/)
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-red?style=for-the-badge&logo=laravel)](https://laravel.com/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-green?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/)
-[![MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-[![Open Source](https://img.shields.io/badge/Open%20Source-MIT-blue?style=for-the-badge&logo=open-source-initiative)](https://opensource.org/license/mit/)
-```
-
-### Community-Badges
-
-```markdown
-[![Contributors](https://img.shields.io/github/contributors/chris1971nrw/community-shop?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
-[![GitHub Issues](https://img.shields.io/github/issues/chris1971nrw/community-shop?style=for-the-badge)](https://github.com/chris1971nrw/community-shop/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/chris1971nrw/community-shop?style=for-the-badge)](https://github.com/chris1971nrw/community-shop/pulls)
-```
-
----
-
-## 📋 **Zusammenfassung**
-
-### ✅ Haupt-Badges
-
-1. **Status Badge:** `[![Status](...)](https://github.com/chris1971nrw/community-shop)`
-2. **Phase Badge:** `[![Phase](...)](https://github.com/chris1971nrw/community-shop)`
-3. **YouTube Badge:** `[![YouTube](...)](https://www.youtube.com/watch?v=pGYTQDRBVgk)`
-
-### 🛠️ Tech Stack Badges
-
-1. **PHP Badge:** `[![PHP](...)](https://www.php.net/)`
-2. **Laravel Badge:** `[![Laravel](...)](https://laravel.com/)`
-3. **Bootstrap Badge:** `[![Bootstrap](...)](https://getbootstrap.com/)`
-4. **License Badge:** `[![License](...)](LICENSE)`
-
-### 📊 Community Badges
-
-1. **Contributors Badge:** `[![Contributors](...)](https://github.com/chris1971nrw/community-shop)`
-2. **GitHub Issues Badge:** `[![GitHub Issues](...)](https://github.com/chris1971nrw/community-shop/issues)`
-3. **GitHub Pull Requests Badge:** `[![GitHub Pull Requests](...)](https://github.com/chris1971nrw/community-shop/pulls)`
-
----
-
-**Version:** 0.1.0  
-**Last Updated:** 2026-05-24
+**Last Updated**: 2026-05-24  
+**Badge Provider**: shields.io & GitHub Badges

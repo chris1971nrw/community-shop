@@ -10,23 +10,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Phase 1: Landing Page (GitHub Pages Live)
 - Phase 2: Core + Community
-  - Voting System Core (In Progress)
-  - Forum mit Voting
-  - Blog mit Voting
-  - Homepage Voting Widgets
+  - ✅ **2.1: Voting System Core (70%)**
+    - ✅ Datenbank-Schema mit Sync-Log
+    - ✅ Unified Voting API
+    - ✅ VotingWidget Component
+    - ✅ Auto-Sync Service
+    - ⏳ Score Calculation (In Progress)
+  - ⏳ **2.2: Integration** (0%)
+  - ⏳ **2.3: Dashboard** (0%)
+  - ⏳ **2.4: E-Commerce Core** (0%)
 - Phase 3: E-Commerce
 - Phase 4: Advanced Features
 
 ### Changed
 - README.md mit Statusbalken
 - Roadmap mit Zeitplan
-- Dokumentationstruktur
+- Dokumentationen
+- Phase 2.1 Voting System Core (70%)
 
 ### Removed
 - Keine
 
 ### Deprecated
 - Keine
+
+### Fixed
+- Keine
+
+### Security
+- Keine
+
+### Documentation
+- ✅ docs/PHASE_2_1_PLAN.md
+- ✅ migrations/2026_05_24_000010_create_voting_tables.php
+- ✅ app/Services/VotingService.php
+- ✅ app/Services/VotingSyncService.php
+- ✅ cron/voting-sync-cron.php
+- ✅ .github/workflows/voting-ci.yml
+- ✅ tests/Feature/VotingTest.php
 
 ---
 
@@ -37,7 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 🌐 GitHub Pages Live (`https://chris1971nrw.github.io/community-shop/`)
 - 🎨 Moderne Landing Page mit Bootstrap 5
 - 📝 Dokumentationen:
-  - [docs/README.md](docs/README.md) - Produktbeschreibung
+  - [docs/README.md](docs/README.md) - Projekt-Übersicht
   - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - Technische Architektur
   - [docs/FEATURES.md](docs/FEATURES.md) - Feature-Übersicht
   - [docs/VOTING_SYSTEM.md](docs/VOTING_SYSTEM.md) - Voting-Integration

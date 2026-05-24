@@ -5,30 +5,42 @@ Ein open-source, community-gesteuerter Shop für die besten Amazon-Produkte. Bew
 ## 📊 Projekt-Status
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│ ✅ Phase 1: Landing Page (100% Completed)                       │
-│ └── 🏠 GitHub Pages Live                                         │
-│ └── 🎨 Moderne Landing Page                                       │
-│ └── 📝 Dokumentationen                                            │
-│ └── 📚 Wiki Setup                                                 │
-├─────────────────────────────────────────────────────────────────┤
-│ 🚧 Phase 2: Core + Community (20% Completed)                    │
-│ ├── ⏳ User-System (0% - Not Started)                           │
-│ ├── ⏳ Blog mit Voting (0% - Not Started)                        │
-│ ├── ⏳ Forum mit Voting (0% - Not Started)                       │
-│ ├── ⏳ Homepage Voting Widgets (0% - Not Started)                │
-│ └── ⏳ CMS (0% - Not Started)                                    │
-├─────────────────────────────────────────────────────────────────┤
-│ 🔜 Phase 3: E-Commerce (0% - Planned)                            │
-│ ├── ⏳ Warenkorb                                                  │
-│ ├── ⏳ Payment Integration                                         │
-│ └── ⏳ Order Tracking                                             │
-├─────────────────────────────────────────────────────────────────┤
-│ 📅 Phase 4: Advanced (0% - Planned)                              │
-│ ├── ⏳ Mobile App                                                 │
-│ ├── ⏳ Advanced Analytics                                         │
-│ └── ⏳ Social Sharing                                             │
-└─────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────┐
+│ ✅ Phase 1: Landing Page (100%)          │
+│ └── 🏠 GitHub Pages Live                  │
+│ └── 🎨 Moderne Landing Page               │
+│ └── 📝 Dokumentationen                    │
+│ └── 📚 Wiki Setup                        │
+├───────────────────────────────────────────┤
+│ 🚧 Phase 2: Core + Community (70%)        │
+│ ├── ✅ 2.1: Voting System Core (70%)      │
+│ │   ├── ✅ Datenbank-Schema               │
+│ │   ├── ✅ Unified Voting API             │
+│ │   ├── ✅ VotingWidget Component         │
+│ │   ├── ✅ Auto-Sync Service              │
+│ │   └── ⏳ Score Calculation (In Progress)│
+│ ├── ⏳ 2.2: Integration (0%)               │
+│ │   ├── ⏳ Shop Integration               │
+│ │   ├── ⏳ Blog Integration                │
+│ │   └── ⏳ Forum Integration               │
+│ ├── ⏳ 2.3: Dashboard (0%)                 │
+│ ├── ⏳ 2.4: E-Commerce Core (0%)           │
+│ ├── ⏳ User-System (0%)                    │
+│ ├── ⏳ Blog mit Voting (0%)                │
+│ ├── ⏳ Forum mit Voting (0%)               │
+│ ├── ⏳ Homepage Voting Widgets (0%)        │
+│ └── ⏳ CMS (0%)                            │
+├───────────────────────────────────────────┤
+│ 🔜 Phase 3: E-Commerce (0%)               │
+│ ├── ⏳ Warenkorb                            │
+│ ├── ⏳ Payment Integration                   │
+│ └── ⏳ Order Tracking                        │
+├───────────────────────────────────────────┤
+│ 📅 Phase 4: Advanced (0%)                 │
+│ ├── ⏳ Mobile App                            │
+│ ├── ⏳ Advanced Analytics                     │
+│ └── ⏳ Social Sharing                         │
+└───────────────────────────────────────────┘
 ```
 
 ## 🚀 Roadmap

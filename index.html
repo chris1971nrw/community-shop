@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🛒 Community Shop - Dein Community-Shop für Amazon-Produkte</title>
-    <meta name="description" content="Ein open-source, community-gesteuerter Shop für die besten Amazon-Produkte. Bewerte mit 👍 ⭐ 🛒.">
+    <title>🛒 Amazon Affiliate Shop - Community Voting</title>
+    <meta name="description" content="Amazon Affiliate Shop mit Community-Voting. Bewerte Produkte mit 👍 ⭐ 🛒.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
@@ -46,6 +46,10 @@
         .milestone-badge { display: inline-block; background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; margin: 0.25rem; }
         .changelog-section { background: white; border-radius: 1rem; padding: 2rem; margin: 2rem 0; }
         .version-badge { display: inline-block; background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; margin-right: 0.5rem; }
+        .affiliate-note { background: #fff3cd; border: 1px solid #ffc107; border-radius: 0.5rem; padding: 1.5rem; margin: 2rem 0; }
+        .affiliate-note h4 { color: #856404; margin-bottom: 1rem; }
+        .affiliate-note ul { margin: 0; padding-left: 1.5rem; }
+        .affiliate-note li { margin-bottom: 0.5rem; }
         @media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
     </style>
 </head>
@@ -53,7 +57,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">🛒 Community Shop</a>
+            <a class="navbar-brand" href="#">🛒 Amazon Affiliate Shop</a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link text-white" href="#status">Status</a></li>
@@ -70,13 +74,32 @@
     <!-- Hero Section -->
     <section class="hero text-center">
         <div class="container hero-content">
-            <h1>🛒 Dein Community-Shop für Amazon-Produkte</h1>
-            <p>Entdecke die besten Produkte, die von der Community ausgewählt wurden.</p>
+            <h1>🛒 Dein Amazon Affiliate Shop</h1>
+            <p>Entdecke die besten Produkte, die von der Community ausgewählt wurden. Bewerte mit 👍 ⭐ 🛒.</p>
             <div class="mt-4">
                 <a href="#features" class="cta-button btn-lg">
                     <i class="bi bi-search me-2"></i>Produkte entdecken
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Note Section -->
+    <section class="container my-4">
+        <div class="affiliate-note">
+            <h4>⚠️ Amazon Affiliate Shop</h4>
+            <p>Dies ist ein <strong>Amazon Affiliate-Projekt</strong> (kein E-Commerce), da wir Amazon-Produkte anzeigen.</p>
+            <ul>
+                <li>✅ <strong>Produkt-Katalog</strong>: Amazon-Links automatisch extrahieren</li>
+                <li>✅ <strong>Community Voting</strong>: 👍 Upvote / ⭐ Favorit / 🛒 Wishlist</li>
+                <li>✅ <strong>Preis-Monitoring</strong>: Automatische Updates</li>
+                <li>✅ <strong>Datenschutz</strong>: DSGVO-konform</li>
+                <li>⚠️ <strong>Kein Warenkorb</strong>: Amazon übernimmt Checkout</li>
+                <li>⚠️ <strong>Keine Payment</strong>: Amazon Affiliate Link</li>
+                <li>⚠️ <strong>Keine Shipping</strong>: Amazon Versand</li>
+                <li>⚠️ <strong>Kein Checkout</strong>: Amazon Checkout</li>
+            </ul>
+            <p class="mt-3"><strong>Checkout erfolgt direkt über Amazon.</strong></p>
         </div>
     </section>
 
@@ -98,7 +121,7 @@
                 <div>
                     <strong class="text-warning">🚧 Phase 2: Core + Community</strong> (70% In Progress)
                     <div class="small text-muted">
-                        ✅ 2.1: Voting System Core (70%) ⏳ 2.2-2.4: Integration/Dashboard
+                        ✅ 2.1: Voting System Core (70%) • ⏳ 2.2-2.4: Integration & Dashboard
                         <br>✅ Datenbank-Schema • ✅ Voting API • ✅ VotingWidget • ✅ Auto-Sync
                         <br>⏳ Score Calculation • ⏳ Integration • ⏳ Dashboard
                     </div>
@@ -108,8 +131,8 @@
             <div class="status-item">
                 <i class="bi bi-clock me-3 fs-4"></i>
                 <div>
-                    <strong class="text-muted">🔜 Phase 3: E-Commerce</strong> (0% Planned)
-                    <div class="small text-muted">Warenkorb • Payment Integration • Order Tracking</div>
+                    <strong class="text-muted">🔜 Phase 3: Affiliate Features</strong> (0% Planned)
+                    <div class="small text-muted">Newsletter • Advanced Search • Analytics • Mobile Responsive</div>
                 </div>
             </div>
             
@@ -127,7 +150,7 @@
     <section id="features" class="features">
         <div class="container">
             <h2 class="text-center mb-5" style="font-size: 2.5rem;">
-                <i class="bi bi-lightbulb text-primary me-2"></i>Was kann der Community Shop?
+                <i class="bi bi-lightbulb text-primary me-2"></i>Was kann der Amazon Affiliate Shop?
             </h2>
             
             <div class="row">
@@ -138,7 +161,7 @@
                             <i class="bi bi-cart-check"></i>
                         </div>
                         <h4>🛍️ Produkt-Katalog</h4>
-                        <p class="text-muted">Tausende von Produkten, automatisch extrahiert von Amazon mit Bild, Preis und Beschreibung.</p>
+                        <p class="text-muted">Amazon-Links automatisch extrahiert mit Bild, Preis und Beschreibung.</p>
                     </div>
                 </div>
 
@@ -149,7 +172,7 @@
                             <i class="bi bi-star-fill"></i>
                         </div>
                         <h4>🗳️ Community Voting</h4>
-                        <p class="text-muted">Bewerte Produkte mit 👍 ⭐ 🛒. Unser intelligentes Score-Modell zeigt die besten Produkte.</p>
+                        <p class="text-muted">Bewerte Produkte mit 👍 ⭐ 🛒. Unser intelligentes Score-Modell.</p>
                     </div>
                 </div>
 
@@ -192,7 +215,7 @@
                         <div class="feature-icon text-primary">
                             <i class="bi bi-globe"></i>
                         </div>
-                        <h4>🌐 API Erste</h4>
+                        <h4>🌐 API First</h4>
                         <p class="text-muted">RESTful API für Entwickler. Produktdaten abrufen, Voting ausführen.</p>
                     </div>
                 </div>
@@ -222,12 +245,12 @@
                             <div class="small text-muted">GitHub Pages Live • Moderne Landing Page • Dokumentationen • Wiki Setup</div>
                         </div>
                         <div class="mb-2">
-                            <strong class="text-warning">🚧 Phase 2.1: Voting System Core</strong> (In Progress)
+                            <strong class="text-warning">🚧 Phase 2.1: Voting System Core</strong> (70%)
                             <div class="small text-muted">Datenbank-Schema • Unified Voting API • VotingWidget • Auto-Sync Service</div>
                         </div>
                         <div>
                             <strong class="text-muted">🔜 Phase 2.2-2.4: Integration & Dashboard</strong> (Geplant)
-                            <div class="small text-muted">Shop • Blog • Forum Integration • CMS</div>
+                            <div class="small text-muted">Integration • Blog • Forum • Dashboard</div>
                         </div>
                     </div>
                 </div>
@@ -239,8 +262,8 @@
                         <span class="milestone-badge">Geplant</span>
                     </div>
                     <div>
-                        <strong class="text-muted">🔜 Phase 3: E-Commerce</strong>
-                        <div class="small text-muted">Warenkorb • Payment Integration • Order Tracking • Shipping</div>
+                        <strong class="text-muted">🔜 Phase 3: Affiliate Features</strong>
+                        <div class="small text-muted">Newsletter • Advanced Search • Analytics • Mobile Responsive</div>
                     </div>
                 </div>
                 
@@ -252,7 +275,7 @@
                     </div>
                     <div>
                         <strong class="text-muted">🔜 Phase 4: Advanced Features</strong>
-                        <div class="small text-muted">Mobile App • Advanced Analytics • Social Sharing • Enterprise Features</div>
+                        <div class="small text-muted">Advanced Analytics • Social Sharing • Enterprise Features</div>
                     </div>
                 </div>
             </div>
@@ -271,8 +294,8 @@
                 <h5 class="mb-2">Neueste Änderungen</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Phase 1: Landing Page (100% Completed)</li>
-                    <li class="mb-2"><i class="bi bi-gear-fill text-warning me-2"></i>Phase 2: Core + Community (20% In Progress)</li>
-                    <li class="mb-2"><i class="bi bi-clock me-2"></i>Phase 3: E-Commerce (0% Planned)</li>
+                    <li class="mb-2"><i class="bi bi-gear-fill text-warning me-2"></i>Phase 2: Core + Community (70% In Progress)</li>
+                    <li class="mb-2"><i class="bi bi-clock me-2"></i>Phase 3: Affiliate Features (0% Planned)</li>
                     <li class="mb-2"><i class="bi bi-lightbulb me-2"></i>Phase 4: Advanced (0% Planned)</li>
                 </ul>
             </div>
@@ -281,11 +304,12 @@
                 <span class="version-badge">v0.1.0</span>
                 <h5 class="mb-2">2026-05-24 - MVP Release</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Github Pages Live 🌐</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>GitHub Pages Live 🌐</li>
                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Moderne Landing Page 🎨</li>
                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dokumentationen 📝</li>
                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Wiki Setup 📚</li>
                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Features: Produkt-Katalog, Voting, Automatisierung, Datenschutz</li>
+                    <li class="mb-2"><i class="bi bi-info-circle-fill text-info me-2"></i>Amazon Affiliate Shop (kein E-Commerce)</li>
                 </ul>
             </div>
             
@@ -303,10 +327,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h2 class="mb-4" style="font-size: 2rem;">
-                        <i class="bi bi-heart text-danger me-2"></i>Über den Community Shop
+                        <i class="bi bi-heart text-danger me-2"></i>Über den Affiliate Shop
                     </h2>
                     <p class="lead text-muted">
-                        🛒 <strong>Der Community Shop</strong> ist eine <span class="text-primary fw-bold">open-source Initiative</span>, die es jedem ermöglicht, gemeinsam die besten Amazon-Produkte zu entdecken, zu bewerten und zu teilen.
+                        🛒 <strong>Der Amazon Affiliate Shop</strong> ist eine <span class="text-primary fw-bold">open-source Initiative</span>, die es jedem ermöglicht, gemeinsam die besten Amazon-Produkte zu entdecken, zu bewerten und zu teilen.
                     </p>
                     <p class="text-muted">
                         <strong>Unsere Mission:</strong> Wir glauben daran, dass <em>Community-getriebene Projekte</em> bessere Ergebnisse liefern als isolierte Suchen. Statt tausende Produkte manuell durchzusehen, <strong>sammelt unsere Community die besten Angebote gemeinsam</strong> - transparent, fair und unabhängig.
@@ -337,6 +361,7 @@
                                 <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Community Bewertungen</li>
                                 <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Preis-Monitoring</li>
                                 <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Beste Produkte automatisch sortieren</li>
+                                <li class="mb-2"><i class="bi bi-info-circle text-info me-2"></i>Checkout über Amazon</li>
                             </ul>
                         </div>
                     </div>
@@ -387,8 +412,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-3 mb-md-0">
-                    <h5 class="text-white mb-3">Community Shop</h5>
-                    <p class="text-muted">Ein community-gesteuerter Shop für Amazon-Produkte.</p>
+                    <h5 class="text-white mb-3">Amazon Affiliate Shop</h5>
+                    <p class="text-muted">Ein community-gesteuerter Amazon Affiliate Shop.</p>
                     <p class="text-muted">Open Source • PHP • Bootstrap</p>
                 </div>
                 <div class="col-md-3">
@@ -411,7 +436,7 @@
             </div>
             <hr class="my-4 border-secondary">
             <p class="text-center text-muted mb-0">
-                &copy; 2026 Community Shop. Built with ❤️ by the Community.
+                &copy; 2026 Amazon Affiliate Shop. Built with ❤️ by the Community.
             </p>
         </div>
     </footer>

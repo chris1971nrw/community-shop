@@ -1,6 +1,8 @@
-# 🛒 Community Shop
+## 🛍️ Amazon Affiliate Shop
 
-Ein open-source, community-gesteuerter Shop für die besten Amazon-Produkte. Bewerte mit 👍 ⭐ 🛒.
+Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten Produkte. Bewerte mit 👍 ⭐ 🛒.
+
+**Hinweis:** Dies ist ein **Affiliate-Projekt** (keine E-Commerce Shopping Cart), da wir Amazon-Produkte anzeigen und die Community wählt. Der Checkout erfolgt direkt über Amazon.
 
 ## 📊 Projekt-Status
 
@@ -67,10 +69,19 @@ Ein open-source, community-gesteuerter Shop für die besten Amazon-Produkte. Bew
 - 🏠 **Homepage Widgets**: Top-Voted, Trending, Highlights
 
 ### 🔜 Phase 3 Features
-- 🛒 **Warenkorb**: E-Commerce Warenkorb
-- 💳 **Payment**: Stripe/PayPal Integration
-- 📦 **Shipping**: Versand-Integration
-- 📧 **Newsletter**: Newsletter-Subscriptions
+
+**Hinweis:** Für Amazon Affiliate-Projekt sind Warenkorb, Payment und Shipping nicht relevant.
+
+- ⚠️ **Warenkorb**: Nicht benötigt (Amazon übernimmt Checkout)
+- ⚠️ **Payment Integration**: Nicht benötigt (Amazon Affiliate)
+- ⚠️ **Order Tracking**: Amazon Order Tracking
+- ⚠️ **Shipping**: Amazon Versand
+
+**Stattdessen:**
+- 📧 **Newsletter**: Community-Updates
+- 🔍 **Advanced Search**: Produktfilter
+- 📊 **Analytics**: Community-Stats
+- 📱 **Mobile Responsive**: Mobile-first Design
 
 ---
 

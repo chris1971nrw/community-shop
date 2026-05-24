@@ -18,9 +18,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - ⏳ Score Calculation (In Progress)
   - ⏳ **2.2: Integration** (0%)
   - ⏳ **2.3: Dashboard** (0%)
-  - ⏳ **2.4: E-Commerce Core** (0%)
-- Phase 3: E-Commerce
+  - ⏳ **2.4: Affiliate Integration** (0%)
+- ⚠️ **Hinweis: Amazon Affiliate (kein E-Commerce)**
+- Phase 3: Affiliate Features
 - Phase 4: Advanced Features
+
+### Changed
+- README.md mit Statusbalken
+- Roadmap mit Zeitplan
+- Dokumentationen
+- Phase 2.1 Voting System Core (70%)
+- **Korrektur: Kein Warenkorb (Amazon Affiliate)**
+
+### Removed
+- Keine
+
+### Deprecated
+- Keine
+
+### Fixed
+- ✅ **Korrektur: Kein Warenkorb** (Amazon Affiliate)
+- ✅ **Phase 3 umbenannt: E-Commerce → Affiliate Features**
+- ✅ **Hinweis: Checkout erfolgt über Amazon**
 
 ### Changed
 - README.md mit Statusbalken
@@ -35,7 +54,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Keine
 
 ### Fixed
-- Keine
+- ✅ **Korrektur: Kein Warenkorb** (Amazon Affiliate)
+- ✅ **Phase 3 umbenannt: E-Commerce → Affiliate Features**
+- ✅ **Hinweis: Checkout erfolgt über Amazon**
 
 ### Security
 - Keine

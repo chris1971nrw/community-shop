@@ -228,6 +228,7 @@ Beitritt:
 - [x] Landing Page Live
 - [x] Dokumentationen
 - [x] **YouTube Video Live** 🎬
+- [x] **Score Calculation Model** 🎯
 - [ ] Database Schema
 - [ ] API Endpunkte
 
@@ -267,7 +268,8 @@ MIT License - Community-getragen
 
 ---
 
-**Version**: 0.1.0 (MVP)  
-**Last Updated**: 2026-05-24  
-**Made with ❤️ by the Community**  
+**Version**: 0.1.0 (MVP)
+**Last Updated**: 2026-05-24
+**Made with ❤️ by the Community**
 **🎬 YouTube Video**: [https://www.youtube.com/watch?v=pGYTQDRBVgk](https://www.youtube.com/watch?v=pGYTQDRBVgk)
+**🎯 Score Calculation**: In Arbeit 🚧

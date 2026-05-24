@@ -1,38 +1,22 @@
 # 🛒 Community Shop
 
-Ein community-gesteuerter Shop, der Produkte über Amazon-Links sammelt, bewertet und vorstellt.
+Ein open-source, community-gesteuerter Shop für die besten Amazon-Produkte. Bewerte mit 👍 ⭐ 🛒.
 
 ## 🌟 Features
 
-- **Amazon Integration**: Produkte automatisch von Amazon-Links extrahieren
-  - Produktname
-  - Bild
-  - Preis
-  - Affiliate-Link
-
-- **Community Voting**
-  - 👍 Upvote / ⭐ Favorit / 🛒 Wishlist
-  - Automatisches Score-Modell
-  - Transparente Community-Bewertungen
-
-- **Intelligentes Management**
-  - Automatische Produkt-Erneuerung
-  - Entfernung veralteter Angebote
-  - Preis-Monitoring
-
-- **Vollständig in PHP**
-  - MVC-Architektur
-  - REST-API
-  - Cron-Jobs für Automation
+- 🛍️ **Produkt-Katalog**: Amazon-Links automatisch extrahieren
+- 🗳️ **Community Voting**: 👍 Upvote / ⭐ Favorit / 🛒 Wishlist
+- 🤖 **Intelligent**: Automatisches Preis-Monitoring & Scoring
+- 🔒 **Privatsphäre**: DSGVO-konform, minimale Daten
 
 ## 🚀 Wie es funktioniert
 
-1. **Amazon-Link teilen**: Mitglieder schlagen Produkte vor
-2. **Automatische Extraktion**: System analysiert den Link
-3. **Community Voting**: Nutzer bewerten Produkte
-4. **Beste Produkte**: Score-basierte Rankings
+1. Mitglieder schlagen Amazon-Produkte vor
+2. System extrahiert automatisch Name, Bild, Preis
+3. Community votet
+4. Beste Produkte werden automatisch sortiert
 
-## 📋 Technische Details
+## 🛠️ Tech Stack
 
 - **Backend**: PHP 8.3+
 - **Frontend**: Bootstrap 5
@@ -40,43 +24,19 @@ Ein community-gesteuerter Shop, der Produkte über Amazon-Links sammelt, bewerte
 - **API**: RESTful
 - **CI/CD**: GitHub Actions
 
-## 📝 Roadmap
+## 📝 Status
 
-### MVP (jetzt)
-- [x] Basis-Struktur
-- [ ] Amazon Parser
-- [ ] Voting System
-- [ ] API Endpunkte
-- [ ] Grundlegende UI
+| Bereich | Status |
+|--|--|
+| Landing Page | ✅ Live 🌐 |
+| MVP Core | 🟡 In Arbeit |
+| Datenbank | ⏳ Nächste Phase |
 
-### Phase 2 (nahe)
-- [ ] User System
-- [ ] Kategorien
-- [ ] Warenkorb
-- [ ] Admin Panel
-
-### Phase 3 (später)
-- [ ] Mobile App
-- [ ] Analytics
-- [ ] Advanced Recommendations
-- [ ] Social Sharing
-
-## 💻 Entwickler
+## 🚀 Starten
 
 ```bash
-# Projekt starten
 php artisan serve
-
-# Tests ausführen
-php artisan test
-
-# Migrationen
-php artisan migrate
 ```
-
-## 📄 Lizenz
-
-MIT License - Community-getragen
 
 ## 🤝 Community
 

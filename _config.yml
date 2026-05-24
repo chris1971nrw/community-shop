@@ -1,0 +1,45 @@
+# 🛒 Community Shop - Jekyll Configuration
+title: 🛒 Community Shop
+description: Ein open-source, community-gesteuerter Shop für die besten Amazon-Produkte. Bewerte mit 👍 ⭐ 🛒.
+baseurl: /community-shop/
+url: '' # leave blank if you host GitHub Pages at your user/org's repository.
+theme: jekyll-theme-slate
+
+# Site settings
+excerpt_separator: "<!--more>"
+logo: "/assets/images/logo.png"
+author:
+  name: "Community Shop"
+  email: "community@shop.example.com"
+  url: "https://github.com/chris1971nrw/community-shop"
+
+# Build settings
+markdown: kramdown
+permalink: /:year-:month-:day-:title/
+
+# Social links
+social:
+  github: chris1971nrw/community-shop
+  twitter: # https://twitter.com/yourhandle
+  email: community@shop.example.com
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji
+
+# Color scheme
+color_scheme: slate
+
+# Enable emoji
+emoji: true
+html: true
+lunr: true
+toc: true
+
+# Footer
+footer:
+  text: "Made with ❤️ by the Community"
+  copyright: "&copy; 2026 Community Shop"

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛒 Community Shop - Deine Amazon Produkt-Sammlung</title>
+    <meta name="description" content="Ein community-gesteuerter Shop für die besten Amazon-Produkte. Bewertungen, Preise und Empfehlungen.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-9V21h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-9V8h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            padding: 5rem 0;
+            background: var(--card-bg);
+        }
+        
+        .feature-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .stats {
+            padding: 4rem 0;
+            background: var(--bg);
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .footer {
+            background: #1e293b;
+            color: #cbd5e1;
+            padding: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-cart3 me-2"></i>Community Shop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#github">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://github.com/chris1971nrw/community-shop">
+                            <i class="bi bi-github me-1"></i>Repo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>🛒 Dein Community-Shop für Amazon-Produkte</h1>
+            <p>Entdecke die besten Produkte, die von der Community ausgewählt wurden.</p>
+            <div class="mt-4">
+                <a href="#features" class="cta-button btn-lg">
+                    <i class="bi bi-search me-2"></i>Produkte entdecken
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="text-center mb-5" style="font-size: 2.5rem;">
+                <i class="bi bi-lightbulb text-primary me-2"></i>Was kann der Community Shop?
+            </h2>
+            
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-cart-check text-success"></i>
+                        </div>
+                        <h4>🛍️ Produkt-Katalog</h4>
+                        <p class="text-muted">Tausende von Produkten, automatisch extrahiert von Amazon mit Bild, Preis und Beschreibung.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <h4>🗳️ Community Voting</h4>
+                        <p class="text-muted">Bewerte Produkte mit 👍 ⭐ 🛒. Unser intelligentes Score-Modell zeigt die besten Produkte.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-robot text-primary"></i>
+                        </div>
+                        <h4>🤖 Automatisierung</h4>
+                        <p class="text-muted">Automatische Preis-Updates, Produkt-Erneuerung und Entfernen veralteter Angebote.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check text-success"></i>
+                        </div>
+                        <h4>🔒 Datenschutz</h4>
+                        <p class="text-muted">DSGVO-konform. Minimale Datenerfassung. Transparente Privacy-Policy.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-code-slash text-primary"></i>
+                        </div>
+                        <h4>🛠️ Open Source</h4>
+                        <p class="text-muted">Vollständig in PHP geschrieben. Open Source. Beiträge sind willkommen!</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-globe text-primary"></i>
+                        </div>
+                        <h4>🌐 API Erste</h4>
+                        <p class="text-muted">RESTful API für Entwickler. Produktdaten abrufen, Voting ausführen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4" style="font-size: 2rem;">
+                        <i class="bi bi-info-circle text-primary me-2"></i>Über den Community Shop
+                    </h2>
+                    <p class="lead text-muted">
+                        Der Community Shop ist eine initiative, die Community-Mitglieder dabei hilft, die besten Amazon-Produkte zu finden und zu bewerten.
+                    </p>
+                    <p class="text-muted">
+                        Statt tausende Amazon-Produkte manuell durchzusehen, sammelt die Community die besten Angebote gemeinsam.
+                    </p>
+                    <div class="mt-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="stat-card">
+                                    <div class="stat-number">50+</div>
+                                    <small>Mitglieder</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card">
+                                    <div class="stat-number">100+</div>
+                                    <small>Produkte</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3"><i class="bi bi-bullseye me-2"></i>Ziel</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Produkte automatisch extrahieren</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Community Bewertungen</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Preis-Monitoring</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Beste Produkte automatisch sortieren</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="font-size: 2rem;">
+                <i class="bi bi-hdd-network text-primary me-2"></i>Tech Stack
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <span class="badge bg-primary fs-5 px-4 py-2">PHP 8.3+</span>
+                        <span class="badge bg-success fs-5 px-4 py-2">Bootstrap 5</span>
+                        <span class="badge bg-info fs-5 px-4 py-2">MySQL/PostgreSQL</span>
+                        <span class="badge bg-warning fs-5 px-4 py-2">REST API</span>
+                        <span class="badge bg-danger fs-5 px-4 py-2">Git/GitHub</span>
+                        <span class="badge bg-secondary fs-5 px-4 py-2">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero text-center py-5">
+        <div class="container">
+            <h2 class="mb-4">Bist du bereit, Teil der Community zu werden?</h2>
+            <p class="text-white-50 mb-4">Verbinde dich, bewerte Produkte und hilf anderen bei der Auswahl!</p>
+            <div class="mt-4">
+                <a href="https://github.com/chris1971nrw/community-shop" class="cta-button btn-lg me-2">
+                    <i class="bi bi-github me-2"></i>GitHub Repository
+                </a>
+                <a href="#features" class="cta-button btn-lg">
+                    <i class="bi bi-search me-2"></i>Produkte entdecken
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="text-white mb-3">Community Shop</h5>
+                    <p class="text-muted">Ein community-gesteuerter Shop für Amazon-Produkte.
+                    <p class="text-muted">Open Source • PHP • Bootstrap</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-white mb-3">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#features" class="text-muted text-decoration-none">Features</a></li>
+                        <li><a href="#about" class="text-muted text-decoration-none">Über uns</a></li>
+                        <li><a href="https://github.com/chris1971nrw/community-shop" class="text-muted text-decoration-none">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-white mb-3">Rechtliches</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Impressum</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Datenschutz</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <p class="text-center text-muted mb-0">
+                &copy; 2026 Community Shop. Built with ❤️ by the Community.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

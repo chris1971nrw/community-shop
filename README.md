@@ -21,11 +21,11 @@
 
 ![Shop](docs/assets/images/shop-logo.png "Amazon Affiliate Shop")
 
-## 🛍️ Amazon Affiliate Shop
+## 🛍️ Community Shop - Deine Amazon Produkt-Sammlung
 
-Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten Produkte. Bewerte mit 👍 ⭐ 🛒.
+Ein community-gesteuerter Shop für die besten Amazon-Produkte. Bewerte mit 👍 ⭐ 🛒.
 
-**Hinweis:** Dies ist ein **Affiliate-Projekt** (keine E-Commerce Shopping Cart), da wir Amazon-Produkte anzeigen und die Community wählt. Der Checkout erfolgt direkt über Amazon.
+**Hinweis:** Dies ist ein **Amazon Affiliate Shop** (kein E-Commerce), da wir Amazon-Produkte anzeigen und die Community wählt. Der Checkout erfolgt direkt über Amazon.
 
 ## 📊 GitHub Status
 

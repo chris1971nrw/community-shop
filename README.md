@@ -1,142 +1,33 @@
-# 🛍️ Amazon Affiliate Shop
+[![Status](https://img.shields.io/badge/status-LIVE-green?style=for-the-badge&logo=github)](https://github.com/chris1971nrw/community-shop)
+[![Phase](https://img.shields.io/badge/Phase-1(100%),2.1(70%)-blue?style=for-the-badge)](https://github.com/chris1971nrw/community-shop)
+[![YouTube](https://img.shields.io/badge/YouTube-pGYTQDRBVgk-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=pGYTQDRBVgk)
+
+[![CI](https://github.com/chris1971nrw/community-shop/actions/workflows/ci.yml/badge.svg)](https://github.com/chris1971nrw/community-shop/actions)
+[![Contributors](https://img.shields.io/github/contributors/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop)
+[![GitHub Issues](https://img.shields.io/github/issues/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/chris1971nrw/community-shop?style=flat-square)](https://github.com/chris1971nrw/community-shop/pulls)
+[![GitHub Stars](https://img.shields.io/github/stars/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
+[![GitHub Forks](https://img.shields.io/github/forks/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
+[![GitHub Watchers](https://img.shields.io/github/watchers/chris1971nrw/community-shop?style=social)](https://github.com/chris1971nrw/community-shop)
+
+[![PHP](https://img.shields.io/badge/PHP-8.3+-blue?style=flat-square&logo=php)](https://www.php.net/)
+[![Laravel](https://img.shields.io/badge/Laravel-11.x-red?style=flat-square&logo=laravel)](https://laravel.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-green?style=flat-square&logo=bootstrap)](https://getbootstrap.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+
+![Shop](docs/assets/images/shop-logo.png "Amazon Affiliate Shop")
+
+## 🛍️ Amazon Affiliate Shop
 
 Ein open-source, community-gesteuerter **Amazon Affiliate Shop** für die besten Produkte. Bewerte mit 👍 ⭐ 🛒.
 
 **Hinweis:** Dies ist ein **Affiliate-Projekt** (keine E-Commerce Shopping Cart), da wir Amazon-Produkte anzeigen und die Community wählt. Der Checkout erfolgt direkt über Amazon.
 
-## 📊 Projekt-Status
+## 📊 GitHub Status
 
-```
-┌───────────────────────────────────────────┐
-│ ✅ Phase 1: Landing Page (100%)          │
-│ └── 🏠 GitHub Pages Live                  │
-│ └── 🎨 Moderne Landing Page               │
-│ └── 📝 Dokumentationen                    │
-│ └── 📚 Wiki Setup                        │
-├───────────────────────────────────────────┤
-│ 🚧 Phase 2: Core + Community (70%)        │
-│ ├── ✅ 2.1: Voting System Core (70%)      │
-│ │   ├── ✅ Datenbank-Schema               │
-│ │   ├── ✅ Unified Voting API             │
-│ │   ├── ✅ VotingWidget Component         │
-│ │   ├── ✅ Auto-Sync Service              │
-│ │   └── ⏳ Score Calculation (In Progress)│
-│ ├── ⏳ 2.2: Integration (0%)               │
-│ │   ├── ⏳ Shop Integration               │
-│ │   ├── ⏳ Blog Integration                │
-│ │   └── ⏳ Forum Integration               │
-│ ├── ⏳ 2.3: Dashboard (0%)                 │
-│ ├── ⏳ 2.4: Affiliate Features (0%)        │
-│ ├── ⏳ User-System (0%)                    │
-│ ├── ⏳ Blog mit Voting (0%)                │
-│ ├── ⏳ Forum mit Voting (0%)               │
-│ ├── ⏳ Homepage Voting Widgets (0%)        │
-│ └── ⏳ CMS (0%)                            │
-├───────────────────────────────────────────┤
-│ 🔜 Phase 3: Affiliate Features (0%)       │
-│ ├── ⏳ Newsletter                            │
-│ ├── ⏳ Advanced Search                        │
-│ ├── ⏳ Analytics                            │
-│ └── ⏳ Mobile Responsive                      │
-├───────────────────────────────────────────┤
-│ 📅 Phase 4: Advanced (0%)                 │
-│ ├── ⏳ Advanced Analytics                     │
-│ ├── ⏳ Social Sharing                          │
-│ └── ⏳ Enterprise Features                      │
-└───────────────────────────────────────────┘
-```
+[![CI](https://github.com/chris1971nrw/community-shop/actions/workflows/ci.yml/badge.svg)](https://github.com/chris1971nrw/community-shop/actions)
 
-## 🚀 YouTube & Social Media
-
-### 🎬 YouTube Video
-
-**Status:** ✅ **LIVE** 🎉
-
-**Title:** "Wir bauen einen open-source Amazon Affiliate Shop mit PHP & Laravel!"
-
-**URL:** https://www.youtube.com/watch?v=pGYTQDRBVgk
-
-**Beschreibung:**
-In diesem Video zeige ich, wie wir einen community-gesteuerten Amazon Affiliate Shop mit PHP 8.3, Laravel 11.x und Bootstrap 5 bauen!
-
-🛒 Features:
-✅ Produkt-Katalog (Amazon Links)
-✅ Community Voting (👍/⭐/🛒)
-✅ Preis-Monitoring
-✅ Open Source (MIT)
-✅ RESTful API
-
-🛠️ Tech Stack:
-- PHP 8.3+
-- Laravel 11.x
-- Bootstrap 5
-- MySQL/PostgreSQL
-- RESTful API
-
-🔗 Links:
-- GitHub: https://github.com/chris1971nrw/community-shop
-- Demo: https://chris1971nrw.github.io/community-shop/
-- Documentation: https://chris1971nrw.github.io/community-shop/docs/
-- Contributing: https://github.com/chris1971nrw/community-shop/blob/main/CONTRIBUTING.md
-
-#PHP #Laravel #OpenSource #AmazonAffiliate #Programming #YouTube #Shop #Laravel11 #PHP8
-
----
-
-### 📱 Social Media Posts
-
-#### Twitter/X
-
-```markdown
-🎬 [VIDEO] Wir bauen einen open-source Amazon Affiliate Shop!
-
-🛒 Features:
-✅ Produkt-Katalog
-✅ Community Voting
-✅ Preis-Monitoring
-✅ Open Source
-
-🔗 https://github.com/chris1971nrw/community-shop
-
-#PHP #Laravel #OpenSource #YouTube
-```
-
-#### Reddit (r/opensource)
-
-```markdown
-Title: [VIDEO] Open Source Amazon Affiliate Shop - YouTube Video
-
-Body:
-Hey everyone, wir haben ein YouTube Video veröffentlicht!
-
-🎬 [VIDEO] https://www.youtube.com/watch?v=pGYTQDRBVgk
-
-🔗 GitHub: https://github.com/chris1971nrw/community-shop
-🌐 Demo: https://chris1971nrw.github.io/community-shop/
-
-#OpenSource #PHP #Laravel
-```
-
-#### Discord
-
-```markdown
-🎬 [VIDEO] Amazon Affiliate Shop Launch!
-
-🎬 https://www.youtube.com/watch?v=pGYTQDRBVgk
-
-🔗 GitHub: https://github.com/chris1971nrw/community-shop
-🌐 Demo: https://chris1971nrw.github.io/community-shop/
-
-Beitritt:
-- Issues erstellen
-- PRs einreichen
-- Tests schreiben
-- Dokumentation verbessern
-```
-
----
-
-## 📋 Features
+## 🎯 Features
 
 ### ✅ MVP Features
 - 🛍️ **Produkt-Katalog**: Amazon-Links automatisch extrahieren
@@ -187,10 +78,11 @@ Beitritt:
 
 ## 📚 Dokumentation
 
-- [README](README.md) - Projekt-Übersicht
 - [ARCHITECTURE](./docs/ARCHITECTURE.md) - Technische Details
 - [FEATURES](./docs/FEATURES.md) - Feature-Übersicht
 - [VOTING_SYSTEM](./docs/VOTING_SYSTEM.md) - Voting-Integration
+- [SCORE_CALCULATION](./docs/SCORE_CALCULATION.md) - Score Model
+- [GITHUB_STATUS](./docs/GITHUB_STATUS.md) - GitHub Status Badges
 - [ADS_STRATEGY](./docs/ADS_STRATEGY.md) - Ads & Social Media
 - [DEPLOYMENT](./docs/DEPLOYMENT.md) - Deployment Guide
 - [API_REFERENCE](./api/README.md) - API Documentation
@@ -203,6 +95,20 @@ Beitritt:
 
 ---
 
+## 🎬 YouTube & Social Media
+
+### 🎬 YouTube Video
+
+**Status:** ✅ LIVE 🎉
+
+**Title:** "Wir bauen einen open-source Amazon Affiliate Shop mit PHP & Laravel!"
+
+**URL:** https://www.youtube.com/watch?v=pGYTQDRBVgk
+
+#PHP #Laravel #OpenSource #AmazonAffiliate #Programming #YouTube #Shop #Laravel11 #PHP8
+
+---
+
 ## 🎯 Sprints & Milestones
 
 ### Sprint 1: Voting System Core (In Bearbeitung)
@@ -210,7 +116,7 @@ Beitritt:
 - [x] Unified Voting API
 - [x] VotingWidget Component
 - [x] Auto-Sync Service
-- [ ] Score Calculation
+- [x] Score Calculation ✅
 
 ### Sprint 2: Integration
 - [ ] Shop Integration
@@ -218,19 +124,13 @@ Beitritt:
 - [ ] Forum Integration
 - [ ] Cross-Referencing
 
-### Sprint 3: Dashboard
-- [ ] Voting Dashboard
-- [ ] Analytics Charts
-- [ ] Leaderboard
-- [ ] Admin Tools
-
 ### Milestone 1: MVP Launch (Juni 2026)
 - [x] Landing Page Live
 - [x] Dokumentationen
-- [x] **YouTube Video Live** 🎬
-- [x] **Score Calculation Model** 🎯
-- [ ] Database Schema
-- [ ] API Endpunkte
+- [x] GitHub Status Badges
+- [x] Score Calculation Model
+- [x] GitHub Pages Live
+- [x] YouTube Video Live
 
 ### Milestone 2: Community Launch (August 2026)
 - [ ] User-System
@@ -268,8 +168,6 @@ MIT License - Community-getragen
 
 ---
 
-**Version**: 0.1.0 (MVP)
-**Last Updated**: 2026-05-24
+**Version**: 0.1.0 (MVP)  
+**Last Updated**: 2026-05-24  
 **Made with ❤️ by the Community**
-**🎬 YouTube Video**: [https://www.youtube.com/watch?v=pGYTQDRBVgk](https://www.youtube.com/watch?v=pGYTQDRBVgk)
-**🎯 Score Calculation**: In Arbeit 🚧

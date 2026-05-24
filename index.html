@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🛒 Community Shop - Deine Amazon Produkt-Sammlung</title>
-    <meta name="description" content="Ein community-gesteuerter Shop für die besten Amazon-Produkte. Bewertungen, Preise und Empfehlungen.">
+    <title>🛒 Community Shop - Dein Community-Shop für Amazon-Produkte</title>
+    <meta name="description" content="Ein open-source, community-gesteuerter Shop für die besten Amazon-Produkte. Bewerte mit 👍 ⭐ 🛒.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
@@ -19,23 +19,46 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .hero { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; padding: 5rem 0; }
+        .navbar { background: linear-gradient(135deg, var(--primary), #7c3aed); backdrop-filter: blur(10px); padding: 1rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .navbar-brand { font-weight: 700; font-size: 1.5rem; color: white !important; }
+        .hero { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; padding: 5rem 0; position: relative; overflow: hidden; }
         .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; }
-        .features { padding: 5rem 0; background: white; }
+        .hero p { font-size: 1.25rem; color: #cbd5e1; margin-bottom: 2rem; }
+        .features { padding: 5rem 0; background: var(--card-bg); }
         .feature-card { background: white; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; transition: all 0.3s ease; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
         .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        .cta-button { background: var(--primary); color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta-button { background: var(--primary); color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
+        .cta-button:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .stats { padding: 4rem 0; background: var(--bg); }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 0.75rem; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 1rem; }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); }
         .footer { background: #1e293b; color: #cbd5e1; padding: 3rem 0; }
+        .status-bar { background: linear-gradient(90deg, #10b981, #3b82f6, #f59e0b, #ef4444); padding: 2rem; border-radius: 1rem; margin: 2rem 0; }
+        .status-item { display: flex; align-items: center; margin-bottom: 1rem; }
+        .status-bar.active { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; } }
+        .roadmap-card { background: white; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+        .phase-card { background: white; border-radius: 1rem; padding: 1.5rem; margin: 1rem 0; border-left: 4px solid var(--primary); }
+        .phase-completed { border-left-color: #10b981; }
+        .phase-in-progress { border-left-color: #f59e0b; }
+        .phase-planned { border-left-color: #64748b; }
+        .milestone-badge { display: inline-block; background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; margin: 0.25rem; }
+        .changelog-section { background: white; border-radius: 1rem; padding: 2rem; margin: 2rem 0; }
+        .version-badge { display: inline-block; background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; margin-right: 0.5rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="background: linear-gradient(135deg, #2563eb, #7c3aed); padding: 1rem 0;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand text-white fw-bold fs-4" href="#">🛒 Community Shop</a>
+            <a class="navbar-brand" href="#">🛒 Community Shop</a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#status">Status</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">Über uns</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#roadmap">Roadmap</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="https://github.com/chris1971nrw/community-shop">
                         <i class="bi bi-github me-1"></i>GitHub
                     </a></li>
@@ -44,14 +67,61 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero text-center">
-        <div class="container">
+        <div class="container hero-content">
             <h1>🛒 Dein Community-Shop für Amazon-Produkte</h1>
-            <p class="lead" style="font-size: 1.25rem; opacity: 0.9;">Entdecke die besten Produkte, die von der Community ausgewählt wurden.</p>
-            <a href="#features" class="cta-button mt-4 fs-5">Produkte entdecken</a>
+            <p>Entdecke die besten Produkte, die von der Community ausgewählt wurden.</p>
+            <div class="mt-4">
+                <a href="#features" class="cta-button btn-lg">
+                    <i class="bi bi-search me-2"></i>Produkte entdecken
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- Status Bar Section -->
+    <section id="status" class="container my-5">
+        <div class="status-bar active">
+            <h4 class="mb-3"><i class="bi bi-activity me-2"></i>Entwicklungsstatus</h4>
+            
+            <div class="status-item">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+                <div>
+                    <strong class="text-success">✅ Phase 1: Landing Page</strong> (100% Completed)
+                    <div class="small text-muted">GitHub Pages Live • Moderne Landing Page • Dokumentationen • Wiki Setup</div>
+                </div>
+            </div>
+            
+            <div class="status-item">
+                <i class="bi bi-gear-fill text-warning me-3 fs-4"></i>
+                <div>
+                    <strong class="text-warning">🚧 Phase 2: Core + Community</strong> (20% In Progress)
+                    <div class="small text-muted">
+                        ⏳ User-System (0%) • ⏳ Blog mit Voting (0%) • ⏳ Forum mit Voting (0%) • ⏳ Homepage Voting Widgets (0%) • ⏳ CMS (0%)
+                    </div>
+                </div>
+            </div>
+            
+            <div class="status-item">
+                <i class="bi bi-clock me-3 fs-4"></i>
+                <div>
+                    <strong class="text-muted">🔜 Phase 3: E-Commerce</strong> (0% Planned)
+                    <div class="small text-muted">Warenkorb • Payment Integration • Order Tracking</div>
+                </div>
+            </div>
+            
+            <div class="status-item">
+                <i class="bi bi-lightbulb me-3 fs-4"></i>
+                <div>
+                    <strong class="text-muted">🔜 Phase 4: Advanced</strong> (0% Planned)
+                    <div class="small text-muted">Mobile App • Advanced Analytics • Social Sharing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
             <h2 class="text-center mb-5" style="font-size: 2.5rem;">
@@ -59,45 +129,68 @@
             </h2>
             
             <div class="row">
+                <!-- Feature 1 -->
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <div class="feature-icon text-success fs-1 mb-3">🛍️</div>
-                        <h4>Produkt-Katalog</h4>
+                        <div class="feature-icon text-success">
+                            <i class="bi bi-cart-check"></i>
+                        </div>
+                        <h4>🛍️ Produkt-Katalog</h4>
                         <p class="text-muted">Tausende von Produkten, automatisch extrahiert von Amazon mit Bild, Preis und Beschreibung.</p>
                     </div>
                 </div>
+
+                <!-- Feature 2 -->
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <div class="feature-icon text-warning fs-1 mb-3">🗳️</div>
-                        <h4>Community Voting</h4>
+                        <div class="feature-icon text-warning">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>🗳️ Community Voting</h4>
                         <p class="text-muted">Bewerte Produkte mit 👍 ⭐ 🛒. Unser intelligentes Score-Modell zeigt die besten Produkte.</p>
                     </div>
                 </div>
+
+                <!-- Feature 3 -->
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <div class="feature-icon text-primary fs-1 mb-3">🤖</div>
-                        <h4>Automatisierung</h4>
+                        <div class="feature-icon text-primary">
+                            <i class="bi bi-robot"></i>
+                        </div>
+                        <h4>🤖 Automatisierung</h4>
                         <p class="text-muted">Automatische Preis-Updates, Produkt-Erneuerung und Entfernen veralteter Angebote.</p>
                     </div>
                 </div>
+
+                <!-- Feature 4 -->
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <div class="feature-icon text-success fs-1 mb-3">🔒</div>
-                        <h4>Datenschutz</h4>
+                        <div class="feature-icon text-success">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>🔒 Datenschutz</h4>
                         <p class="text-muted">DSGVO-konform. Minimale Datenerfassung. Transparente Privacy-Policy.</p>
                     </div>
                 </div>
+
+                <!-- Feature 5 -->
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <div class="feature-icon text-primary fs-1 mb-3">🛠️</div>
-                        <h4>Open Source</h4>
+                        <div class="feature-icon text-primary">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h4>🛠️ Open Source</h4>
                         <p class="text-muted">Vollständig in PHP geschrieben. Open Source. Beiträge sind willkommen!</p>
                     </div>
                 </div>
+
+                <!-- Feature 6 -->
                 <div class="col-md-4">
                     <div class="feature-card">
-                        <div class="feature-icon text-primary fs-1 mb-3">🌐</div>
-                        <h4>API Erste</h4>
+                        <div class="feature-icon text-primary">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h4>🌐 API Erste</h4>
                         <p class="text-muted">RESTful API für Entwickler. Produktdaten abrufen, Voting ausführen.</p>
                     </div>
                 </div>
@@ -105,7 +198,105 @@
         </div>
     </section>
 
-    <section id="about" class="bg-white py-5">
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="bg-white py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" style="font-size: 2rem;">
+                <i class="bi bi-list-check me-2"></i>Projekt-Roadmap
+            </h2>
+            
+            <div class="roadmap-card">
+                <h4 class="mb-3"><i class="bi bi-calendar-check me-2"></i>Zeitplan</h4>
+                
+                <!-- Q3 2026 -->
+                <div class="phase-card phase-in-progress">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="mb-0">📅 Q3 2026 (Mai - August)</h5>
+                        <span class="milestone-badge">Aktuell</span>
+                    </div>
+                    <div class="mt-3">
+                        <div class="mb-2">
+                            <strong class="text-success">✅ Phase 1: Landing Page</strong> (100%)
+                            <div class="small text-muted">GitHub Pages Live • Moderne Landing Page • Dokumentationen • Wiki Setup</div>
+                        </div>
+                        <div class="mb-2">
+                            <strong class="text-warning">🚧 Phase 2.1: Voting System Core</strong> (In Progress)
+                            <div class="small text-muted">Datenbank-Schema • Unified Voting API • VotingWidget • Auto-Sync Service</div>
+                        </div>
+                        <div>
+                            <strong class="text-muted">🔜 Phase 2.2-2.4: Integration & Dashboard</strong> (Geplant)
+                            <div class="small text-muted">Shop • Blog • Forum Integration • CMS</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Q4 2026 -->
+                <div class="phase-card phase-planned">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="mb-0">📅 Q4 2026 (September - Dezember)</h5>
+                        <span class="milestone-badge">Geplant</span>
+                    </div>
+                    <div>
+                        <strong class="text-muted">🔜 Phase 3: E-Commerce</strong>
+                        <div class="small text-muted">Warenkorb • Payment Integration • Order Tracking • Shipping</div>
+                    </div>
+                </div>
+                
+                <!-- 2027 H1 -->
+                <div class="phase-card phase-planned">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="mb-0">📅 2027 H1 (Januar - März)</h5>
+                        <span class="milestone-badge">Geplant</span>
+                    </div>
+                    <div>
+                        <strong class="text-muted">🔜 Phase 4: Advanced Features</strong>
+                        <div class="small text-muted">Mobile App • Advanced Analytics • Social Sharing • Enterprise Features</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Section -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5" style="font-size: 2rem;">
+            <i class="bi bi-file-text me-2"></i>Changelog
+        </h2>
+        
+        <div class="changelog-section">
+            <div class="mb-4">
+                <span class="version-badge">Unreleased</span>
+                <h5 class="mb-2">Neueste Änderungen</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Phase 1: Landing Page (100% Completed)</li>
+                    <li class="mb-2"><i class="bi bi-gear-fill text-warning me-2"></i>Phase 2: Core + Community (20% In Progress)</li>
+                    <li class="mb-2"><i class="bi bi-clock me-2"></i>Phase 3: E-Commerce (0% Planned)</li>
+                    <li class="mb-2"><i class="bi bi-lightbulb me-2"></i>Phase 4: Advanced (0% Planned)</li>
+                </ul>
+            </div>
+            
+            <div class="mb-4">
+                <span class="version-badge">v0.1.0</span>
+                <h5 class="mb-2">2026-05-24 - MVP Release</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Github Pages Live 🌐</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Moderne Landing Page 🎨</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dokumentationen 📝</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Wiki Setup 📚</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Features: Produkt-Katalog, Voting, Automatisierung, Datenschutz</li>
+                </ul>
+            </div>
+            
+            <div>
+                <span class="version-badge">v0.0.0</span>
+                <h5 class="mb-2">Project Init</h5>
+                <p class="text-muted">Projektstart mit README, Dokumentation und GitHub Pages Setup.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-white py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
@@ -118,20 +309,17 @@
                     <p class="text-muted">
                         <strong>Unsere Mission:</strong> Wir glauben daran, dass <em>Community-getriebene Projekte</em> bessere Ergebnisse liefern als isolierte Suchen. Statt tausende Produkte manuell durchzusehen, <strong>sammelt unsere Community die besten Angebote gemeinsam</strong> - transparent, fair und unabhängig.
                     </p>
-                    <p class="text-muted">
-                        <strong>Wie es funktioniert:</strong> Mitglieder schlagen Amazon-Produkte vor → Das System extrahiert automatisch Name, Bild, Preis und Bewertung → Die Community votet mit 👍 ⭐ 🛒 → Unser intelligentes <strong>Score-Modell</strong> ordnet Produkte nach Nützlichkeit und Beliebtheit → Die besten Angebote werden hervorgehoben.
-                    </p>
                     <div class="mt-4">
                         <div class="row">
                             <div class="col-6">
-                                <div class="stat-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <div class="stat-number fs-1 text-primary fw-bold">50+</div>
+                                <div class="stat-card">
+                                    <div class="stat-number">50+</div>
                                     <small>aktive Community</small>
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="stat-card" style="background: white; padding: 1.5rem; border-radius: 0.75rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <div class="stat-number fs-1 text-primary fw-bold">100+</div>
+                                <div class="stat-card">
+                                    <div class="stat-number">100+</div>
                                     <small>geprüfte Produkte</small>
                                 </div>
                             </div>
@@ -139,21 +327,15 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card border-0 shadow h-100">
+                    <div class="card border-0 shadow">
                         <div class="card-body p-4">
-                            <h5 class="card-title mb-3">
-                                <i class="bi bi-heart me-2 text-danger"></i>Unsere Werte
-                            </h5>
+                            <h5 class="card-title mb-3"><i class="bi bi-bullseye me-2"></i>Ziel</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Transparenz:</strong> Alle Bewertungen öffentlich</li>
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Community-getrieben:</strong> Jeder kann beitragen</li>
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Datenschutz:</strong> DSGVO-konform</li>
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Open Source:</strong> Transparenter Code</li>
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Fairness:</strong> Automatisches Scoring</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Produkte automatisch extrahieren</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Community Bewertungen</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Preis-Monitoring</li>
+                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Beste Produkte automatisch sortieren</li>
                             </ul>
-                            <div class="mt-3 p-3 bg-light rounded">
-                                <strong class="text-primary">Gründung 2026:</strong> Der Community Shop entsteht, um eine <em>Alternative</em> zu algorithmischen Rankings, die von Unternehmen kontrolliert werden. Wir geben die Macht zurück in die Hände der Nutzer!
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,7 +343,8 @@
         </div>
     </section>
 
-    <section class="bg-light py-5">
+    <!-- Tech Stack Section -->
+    <section class="py-5">
         <div class="container">
             <h2 class="text-center mb-5" style="font-size: 2rem;">
                 <i class="bi bi-hdd-network text-primary me-2"></i>Tech Stack
@@ -181,6 +364,7 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="hero text-center py-5">
         <div class="container">
             <h2 class="mb-4">Bist du bereit, Teil der Community zu werden?</h2>
@@ -196,6 +380,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -209,6 +394,7 @@
                     <ul class="list-unstyled">
                         <li><a href="#features" class="text-muted text-decoration-none">Features</a></li>
                         <li><a href="#about" class="text-muted text-decoration-none">Über uns</a></li>
+                        <li><a href="#roadmap" class="text-muted text-decoration-none">Roadmap</a></li>
                         <li><a href="https://github.com/chris1971nrw/community-shop" class="text-muted text-decoration-none">GitHub</a></li>
                     </ul>
                 </div>

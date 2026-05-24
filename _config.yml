@@ -20,7 +20,7 @@ permalink: /:year-:month-:day-:title/
 # Social links
 social:
   github: chris1971nrw/community-shop
-  twitter: # https://twitter.com/yourhandle
+  twitter:
   email: community@shop.example.com
 
 # Plugins

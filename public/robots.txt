@@ -1,0 +1,22 @@
+# Robots.txt für Community Shop
+User-agent: *
+Allow: /
+
+# Google Analytics
+Allow: /sitemap.xml
+
+# Sitemap
+Sitemap: https://chris1971nrw.github.io/community-shop/sitemap.xml
+
+# Disallow
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.git/
+Disallow: /.nojekyll
+
+# Sitemaps
+Sitemap: https://chris1971nrw.github.io/community-shop/sitemap-index.xml
+
+# PWA
+Allow: /manifest.json
+Allow: /sw.js

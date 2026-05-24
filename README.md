@@ -1,120 +1,90 @@
-<<<<<<< HEAD
-# community-shop
-=======
-# 🛍️ Community-Shop
+# 🛒 Community Shop
 
-<div align="center">
+Ein community-gesteuerter Shop, der Produkte über Amazon-Links sammelt, bewertet und vorstellt.
 
-![Community-Shop Logo](repository-icon.png)
+## 🌟 Features
 
-**E-Commerce Plattform für deine Community**
+- **Amazon Integration**: Produkte automatisch von Amazon-Links extrahieren
+  - Produktname
+  - Bild
+  - Preis
+  - Affiliate-Link
 
-</div>
+- **Community Voting**
+  - 👍 Upvote / ⭐ Favorit / 🛒 Wishlist
+  - Automatisches Score-Modell
+  - Transparente Community-Bewertungen
 
----
+- **Intelligentes Management**
+  - Automatische Produkt-Erneuerung
+  - Entfernung veralteter Angebote
+  - Preis-Monitoring
 
-<div align="center">
+- **Vollständig in PHP**
+  - MVC-Architektur
+  - REST-API
+  - Cron-Jobs für Automation
 
-### 🎯 Status: `🟢 In Entwicklung`
+## 🚀 Wie es funktioniert
 
-| Feature | Status |
-|---------|--------|
-| 🛒 Warenkorb | ✅ |
-| 👥 Community | ✅ |
-| ⭐ Punkte-System | ✅ |
-| 🔐 Sicherheit | ✅ |
-| 📊 Dashboard | 🟡 |
-| 🚀 Deployment | 🟡 |
+1. **Amazon-Link teilen**: Mitglieder schlagen Produkte vor
+2. **Automatische Extraktion**: System analysiert den Link
+3. **Community Voting**: Nutzer bewerten Produkte
+4. **Beste Produkte**: Score-basierte Rankings
 
-</div>
+## 📋 Technische Details
 
----
+- **Backend**: PHP 8.3+
+- **Frontend**: Bootstrap 5
+- **Datenbank**: MySQL/PostgreSQL
+- **API**: RESTful
+- **CI/CD**: GitHub Actions
 
-## ✨ Funktionen
+## 📝 Roadmap
 
-### 🛍️ **Warenkorb & E-Commerce**
-- Intuitive Produktübersicht
-- Warenkorb-Management
-- Bestellabwicklung
-- Zahlungsvorgänge
+### MVP (jetzt)
+- [x] Basis-Struktur
+- [ ] Amazon Parser
+- [ ] Voting System
+- [ ] API Endpunkte
+- [ ] Grundlegende UI
 
-### 👥 **Community-Features**
-- Benutzer-Profile
-- Community-Interaktion
-- Bewertungssystem
-- Teilen & Empfehlungen
+### Phase 2 (nahe)
+- [ ] User System
+- [ ] Kategorien
+- [ ] Warenkorb
+- [ ] Admin Panel
 
-### ⭐ **Punkte-System**
-- Community-Punkte
-- Belohnungen
-- Treueprogramme
-- Rangliste
+### Phase 3 (später)
+- [ ] Mobile App
+- [ ] Analytics
+- [ ] Advanced Recommendations
+- [ ] Social Sharing
 
-### 🔐 **Sicherheit**
-- Benutzer-Authentifizierung
-- Daten-Schutz
-- SSL-Verschlüsselung
-- Security-Monitoring
-
----
-
-## 📋 Projekt-Status
-
-- **Entwicklungsphase:** MVP
-- **Letzte Aktualisierung:** 2026-05-23
-- **Priorität:** Hoch
-- **Team:** Multi-Agenten-System
-
----
-
-## 🛠️ Technologie-Stack
-
-- **Backend:** PHP 8.2+ (OOP)
-- **Datenbank:** MySQL / MariaDB
-- **Webserver:** Nginx / Apache
-- **Dependency Management:** Composer
-
----
-
-## 📦 Installation
+## 💻 Entwickler
 
 ```bash
-# Repository klonen
-git clone [REPO_URL]
+# Projekt starten
+php artisan serve
 
-# Abhängigkeiten installieren
-cd code
-composer install
+# Tests ausführen
+php artisan test
 
-# Datenbank konfigurieren
-# Datenbank-Migrationen ausführen
-
-# Webserver starten
+# Migrationen
+php artisan migrate
 ```
-
----
-
-## 🔌 API Endpunkte
-
-Die REST-API ist über `/api/v1/...` erreichbar. Details in `API.md`.
-
----
-
-## 📞 Support
-
-Bei Fragen oder Problemen: [Support-Ticket](mailto:support@community-shop.de)
-
----
 
 ## 📄 Lizenz
 
-MIT License - Details in `LICENSE.md`
+MIT License - Community-getragen
+
+## 🤝 Community
+
+Hilfe bei der Entwicklung erwünscht!
+- Issues erstellen
+- Pull Requests welcome
+- Dokumentation verbessern
 
 ---
 
-<div align="center">
-
-**[GitHub Repo]** **[Dokumentation]** **[Issues]**
-
-</div>
->>>>>>> 19ea6deaee24ac34e9228c220066a4888177e524
+**Made with ❤️ by the Community**
